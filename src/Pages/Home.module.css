@@ -1,0 +1,86 @@
+/* src/components/HomeContent/HomeContent.module.css */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 60px;
+  min-height: 400px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+/* ✅ Left Box: Just slogan (no border or background) */
+.leftBox {
+  flex: 1;
+  padding-right: 40px;
+}
+
+/* Slogan Text Styling */
+.heading1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 8px;
+ 
+}
+
+.heading2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #0c0c0c;
+  margin-bottom: 0;
+  margin-top: 0;
+
+}
+
+.blueText{
+     color:#093fb4;;
+}
+
+.heading3 {
+  font-size: 76px;
+  font-weight: bold;
+  color: #5eaf67;
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 0;
+
+}
+
+.heading4 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000000;
+  margin-top: 0;
+
+}
+
+.subtext {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ✅ Right Box: AQI data with border & radius */
+.rightBox {
+  flex: 1;
+  padding-left: 40px;
+  border: 2px solid #cce0ff;
+  border-radius: 10px;
+  padding: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.aqiValue {
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 15px;
+  color: #004d00;
+}
+
+.status {
+  font-size: 18px;
+  color: #444;
+  margin-top: 8px;
+}

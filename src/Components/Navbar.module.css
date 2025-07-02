@@ -1,0 +1,50 @@
+/* src/components/Navbar/Navbar.module.css */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;                /* 🔹 Set height */
+  width: 100%;                 /* 🔹 Default full width */
+  background-color: #ffffff;   /* Dark blue */
+  padding: 0 20px;             /* Horizontal spacing */
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+}
+
+/* Logo styles */
+.logo img {
+  height: 45px;                /* Adjusted logo size to fit 70px navbar */
+  object-fit: contain;
+}
+
+/* Center navigation links */
+.navLinks {
+  display: flex;
+  gap: 60px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Link styles */
+.navLinks li a {
+  color: rgb(17, 17, 17);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.navLinks li a:hover {
+  color: #093fb4;
+
+}
+
+/* Admin login on the right */
+.adminLogin img {
+    height: 26px;                /* Adjusted logo size to fit 70px navbar */
+  object-fit: contain;
+}
+
+
+
