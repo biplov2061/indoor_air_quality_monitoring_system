@@ -105,13 +105,21 @@ h3 {
 }
 
 .viewMoreLink {
-  display: inline-block;
-  margin-top: 35px;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: #007bff;
+  cursor: pointer;
   text-decoration: none;
   font-size: 14px;
-  font-weight: 500;
+  transition: color 0.3s ease;
+  margin-top: 25px;
 }
 
+.viewMoreLink:hover {
+  color: #0056b3;
+}
 .rightSection {
   flex: 1;
 }
