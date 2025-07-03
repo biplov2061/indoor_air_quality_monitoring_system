@@ -6,6 +6,8 @@ import closeDoors from "../Assets/icon-locked-inside.png";
 import feelsLike from "../Assets/high-temperature.png";
 import cloud from "../Assets/clould.jpg";
 import humidity from "../Assets/humidity.png";
+import PollutionChart from "../Components/PollutionChart";
+
 function generateCurrentDateTime() {
   const now = new Date();
 
@@ -66,33 +68,36 @@ export default function Dashboard() {
                 <img
                   src={closeDoors}
                   className={styles.recommendationIcon}
-                  alt="mask"
+                  alt="close doors"
                 />
                 Close doors, windows
               </li>
             </ul>
 
-            <a href="#" className={styles.viewMoreLink}>
+            <button 
+              className={styles.viewMoreLink}
+              onClick={() => console.log('View more safety measures')}
+            >
               View more safety measures →
-            </a>
+            </button>
           </div>
         </section>
 
         <section className={styles.rightSection}>
           <section className={styles.feelsLike}>
             <h3>
-              <img src={feelsLike} className={styles.contentImg} />
+              <img src={feelsLike} className={styles.contentImg} alt="temperature icon" />
               Feels like
             </h3>
             <h5>current</h5>
             <h2 className={styles.value}>
-              <img src={cloud} className={styles.valueImg} />
+              <img src={cloud} className={styles.valueImg} alt="cloud icon" />
               24.9°C
             </h2>
           </section>
           <section className={styles.humidity}>
             <h3>
-              <img src={humidity} className={styles.humidityImg} />
+              <img src={humidity} className={styles.humidityImg} alt="humidity icon" />
               Humidity
             </h3>
             <h5>current</h5>
@@ -103,6 +108,7 @@ export default function Dashboard() {
 
       <div className={styles.footer}>
         <h1>24 Hour pollutants concentration</h1>
+        <PollutionChart />
       </div>
     </div>
   );
