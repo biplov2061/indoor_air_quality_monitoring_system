@@ -1,0 +1,59 @@
+.iaq-container {
+  min-width: 500px;
+  max-width: 550px;
+}
+
+.iaq-container h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.iaq-container p {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+
+.iaq-subtitle {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.iaq-bar-wrapper {
+  position: relative;
+  margin-top: 80px;
+}
+
+.iaq-bar {
+  height: 20px;
+  border-radius: 10px;
+  background: linear-gradient(to right, green, yellow, orange, red);
+  position: relative;
+}
+
+.iaq-arrow {
+  position: absolute;
+  top: -35px;
+  transform: translateX(-50%);
+  font-size: 28px;
+  color: black;
+  font-weight: 900;
+}
+
+.iaq-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #333;
+  font-weight: 700;
+}
+
+.iaq-labels div span {
+  display: block;
+  font-size: 11px;
+  font-style: italic;
+  color: #666;
+}
