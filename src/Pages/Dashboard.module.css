@@ -93,6 +93,7 @@ h3 {
   border-radius: 50%;
   box-shadow: 0 0 0 1px #22c55e;
 }
+
 .recommendationItem {
   font-weight: 600;
   font-size: 14px;
@@ -120,6 +121,7 @@ h3 {
 .viewMoreLink:hover {
   color: #0056b3;
 }
+
 .rightSection {
   flex: 1;
 }
@@ -179,6 +181,7 @@ h5 {
   padding: 15px;
   justify-content: center;
 }
+
 .valueImg {
   width: 64px;
   height: 64px;
@@ -190,9 +193,214 @@ h5 {
 
 .footer h1 {
   display: inline-block;
-  margin: 0;
-  margin-top: 20px;
   font-size: 24px;
   font-weight: 500;
   margin: 0;
+}
+
+.iaqIndicator {
+  border: 1px solid black;
+  display: flex;
+  padding: 30px 5px;
+  justify-content: space-around;
+}
+
+.iaqDetails {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.iaqValue {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.iaqCondition {
+  font-size: 20px;
+  font-weight: 600;
+  color: #f56e22;
+}
+
+.iaqRecommend {
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 700;
+  margin-top: 30px;
+  color: #555;
+}
+
+.measuresButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 50px;
+}
+
+.measuresButton:hover {
+  background-color: #0056b3;
+}
+
+.sensorLocation {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.sensorLocation h2 {
+  text-align: left;
+}
+
+.sensorLocation iframe {
+  display: block;
+  margin: 50px auto 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.highlight {
+  color: #093fb4;
+}
+
+.pollutantSection {
+  max-width: 1200px;
+  margin: 0px auto;
+  margin-top: 80px;
+}
+
+.sectionTitle {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0 0 0 30px;
+}
+
+.sectionSubtitle {
+  margin: 0 0 0 30px;
+}
+
+.indicatorTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 16px 0;
+}
+
+.pollutantGrid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.pollutantCard {
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 16px 16px 32px 16px;
+  background-color: #fff;
+  min-width: 240px;
+}
+
+.pollutantHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.pollutantName {
+  font-weight: 600;
+}
+
+.smokeIcon {
+  margin-right: 8px;
+}
+
+.statusBadge {
+  background-color: #71e196;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-style: italic;
+}
+
+.currentLabel {
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.pollutantSub {
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.pollutantValue {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.weatherSection {
+  margin: 80px auto 0 auto;
+  max-width: 1200px;
+}
+
+.weatherGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.weatherCard {
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff;
+}
+
+.weatherHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.weatherIcon {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.weatherName {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.weatherSub {
+  font-weight: 600;
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.weatherValue {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.extraIcon {
+  margin-right: 8px;
+  font-size: 20px;
 }
