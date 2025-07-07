@@ -1,12 +1,19 @@
 // src/components/Navbar.js
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from '../Assets/logo.png';
 import styles from './Navbar.module.css';
 import login from '../Assets/login_logo.jpg';
 
 
+
+
+
+
 function Navbar() {
+
+
+
   return (
     <nav className={styles.navbar}>
       {/* Logo on the left */}
