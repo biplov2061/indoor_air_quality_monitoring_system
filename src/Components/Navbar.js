@@ -1,11 +1,10 @@
 // src/components/Navbar.js
-import React, { useEffect } from "react";
+
 import { Link } from "react-router-dom";
-import logo from '../Assets/logo.png';
+import { NavLink } from "react-router-dom";
+import siteIcon from "../Assets/siteIcon.png";
 import styles from './Navbar.module.css';
 import login from '../Assets/login_logo.jpg';
-
-
 
 
 
@@ -18,17 +17,29 @@ function Navbar() {
     <nav className={styles.navbar}>
       {/* Logo on the left */}
       <div className={styles.logo}>
-        <Link to="/">
-          <img src={logo} alt="Site Logo" />
-        </Link>
+        <NavLink to="/"
+        className={({isActive}) => isActive ? styles.active_link : styles.inactive_link}>
+          <img src={siteIcon} alt="Site Logo" />
+        </NavLink>
       </div>
 
       {/* Navigation links */}
       <ul className={styles.navLinks}>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/dashboard">Dashboard</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
+        <li><NavLink to="/" end
+        className={({isActive}) => isActive ? styles.active_link : styles.inactive_link}
+        >Home</NavLink></li>
+
+        <li><NavLink to="/dashboard"
+        className={({isActive}) => isActive ? styles.active_link : styles.inactive_link}
+        >Dashboard</NavLink></li>
+
+        <li><NavLink to="/about"
+        className={({isActive})=> isActive ? styles.active_link : styles.inactive_link}
+        >About</NavLink></li>
+
+        <li><NavLink to="/contact"
+        className={({isActive}) => isActive ? styles.active_link : styles.inactive_link}
+        >Contact</NavLink></li>
       </ul>
 
       {/* Admin login on the right */}

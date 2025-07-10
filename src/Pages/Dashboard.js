@@ -140,7 +140,7 @@ export default function Dashboard() {
       </div>
 
       <div className={styles.footer}>
-        <h1>24 Hour pollutants concentration</h1>
+        <h1 className={styles.pollutants_concentration_h1 }>24 Hour pollutants concentration</h1>
         <PollutionChart />
       </div>
 
