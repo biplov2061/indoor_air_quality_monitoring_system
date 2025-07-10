@@ -59,8 +59,9 @@
 }
 
 .subtext {
-  font-size: 16px;
+  font-size: 15px;
   color: #555;
+  margin-top: 24px;
 }
 
 /* ✅ Right Box: AQI data with border & radius */
@@ -69,7 +70,8 @@
   padding-left: 15px;
   display: flex;
   flex-direction: column;
-  gap: 20px
+  gap: 20px;
+  height: 260px;
   
 }
 
@@ -79,7 +81,9 @@
   border-radius: 10px;
   background-color: #ffffff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  height: fit-content;
+  height: 120px;;
+  padding-bottom: 25px;
+  padding-top: 25px;
   
 }
 
@@ -88,19 +92,18 @@
   display: flex;
   border-radius: 10px;
   background-color: #ffffff;
-  height: fit-content;
   gap: 10px;
-  margin-bottom: -8px;
 }
+
 
 .Temperature_logo_text {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
-  height: fit-content;
+  height: 46px;
   border-radius: 10px;
   width: 50%;
   box-shadow: 0 4px 10px rgba(18, 17, 17, 0.2);
+  padding-left: 7px;
 }
 
 
@@ -113,12 +116,11 @@
 .Humidity_logo_text{
    display: flex;
   align-items: center;
-  margin-bottom: 10px;
   box-shadow: 0 4px 10px rgba(18, 17, 17, 0.2);
-  height: fit-content;
+  height: 46px;
   width: 50%;
    border-radius: 10px;
-  padding-left: 10px
+  padding-left: 13px
 }
 
 .HumidityIcon {
@@ -141,14 +143,13 @@ h4{
 .aqiValue {
   font-size: 18px;
   font-weight: 600;
-  margin-top: 5px;
   color: #047804;
 }
 
 .status {
   font-size: 18px;
   color: #444;
-  margin-top: 8px;
+  margin-top: 17px;
 }
 
 
@@ -157,9 +158,9 @@ h4{
   display: flex;
   align-items: center;
   box-shadow: 0 4px 10px rgba(18, 17, 17, 0.2);
-  height: fit-content;
+  height: 45px;
   border-radius: 10px;
-  padding-left: 10px;
+  padding-left: 12px;
   justify-content: space-between;
 }
 
@@ -172,6 +173,7 @@ h4{
 
 .Link{
   color:  #5aa2ee;
+  font-weight: 100;
 }
 
 .Link:hover{
@@ -181,6 +183,7 @@ h4{
 .temperatureValue , .humidityValue{
   margin-left: 25px;
 }
+
 
 .locationIcon_text{
   display: flex;
@@ -252,15 +255,15 @@ h4{
 }
 
 @media (max-width: 600px) {
-  .about-container {
+  .about_container {
     padding: 15px;
   }
 
-  .about-heading {
+  .about_heading {
     font-size: 22px;
   }
 
-  .about-text {
+  .about_text {
     font-size: 14px;
   }
 }
@@ -322,12 +325,12 @@ h4{
 
 .solution_card p {
   font-size: 14px;
-  color: #555;
+  color: #666565;
   line-height: 1.5;
 }
 
 @media (max-width: 768px) {
-  .cards-wrapper {
+  .cards_wrapper {
     flex-direction: column;
     gap: 16px;
   }
@@ -349,7 +352,7 @@ h4{
 .upperFooter{
   background-color: #093fb4;
   color: white;
-  padding: 40px 20px;
+  padding: 70px 20px;
   text-align: center;
   height: fit-content;
 }
@@ -425,6 +428,10 @@ h4{
   font-weight: 800;
 }
 
+.footerIndoorAirHeading:hover{
+  cursor: pointer;
+}
+
 .span{
   color: #2576e7;
   font-weight: 800;
@@ -444,7 +451,7 @@ h4{
 
 .AllRights{
   font-size: 13px;
-  color: #555;
+  color: #666565;
 }
 
 .footerLinkLists{
@@ -458,7 +465,7 @@ h4{
 }
 
 .footerLink{
-   color: #555;
+   color: #666565;
   text-decoration: none;
   font-size: 13px;
 }
