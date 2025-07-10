@@ -1,5 +1,5 @@
 import React from "react";
-import cloud from "../Assets/clould.jpg";
+
 import "./aboutus.css"; // Import external CSS
 
 export default function IndoorAirPage() {
@@ -10,7 +10,7 @@ export default function IndoorAirPage() {
         <h1 className="indoor-air-title">Beyond the Naked Eye</h1>
 
         <div className="indoor-air-vision-box">
-         <img src={cloud} className={"indoor-air-value-img"} alt="cloud icon" />
+        
 
             <span className="indoor-air-vision-title">Our Vision</span>
          

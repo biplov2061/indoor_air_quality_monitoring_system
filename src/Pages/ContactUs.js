@@ -16,9 +16,9 @@ const ContactPage = () => {
       </div>
 
       
-      <div className="styles.contact_content">
+      <div className="contact-content">
        
-        <div className="styles.contact_form">
+        <div className="contact-form">
           <h2>Send us message</h2>
           <form>
             <label>Your name</label>
@@ -38,21 +38,21 @@ const ContactPage = () => {
         </div>
 
        
-        <div className="styles.contact_info">
+        <div className="contact-info">
           <h2>Contact information</h2>
-          <div className="styles.info_block">
+          <div className="info-block">
             <strong >📍 Address</strong>
             <p className="details">Balkumari, Lalitpur</p>
           </div>
-          <div className="styles.info_block">
+          <div className="info-block">
             <strong>✏️ Phone number</strong>
             <p className="details">9816078919</p>
           </div>
-          <div className="styles.info_block">
+          <div className="info-block">
             <strong>📧 Email address</strong>
-            <p className="details">.edu.np</p>
+            <p className="details">iaq@email.com.np</p>
           </div>
-          <div className="styles.info_block">
+          <div className="info-block">
             <strong>Connect With Us</strong>
             <p>Add social links here</p>
           </div>
