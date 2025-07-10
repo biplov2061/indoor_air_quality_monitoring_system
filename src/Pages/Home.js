@@ -4,12 +4,11 @@ import { useNavigate } from "react-router-dom";
 import thermometerIcon from "../Assets/high-temperature.png";
 import HumidityIcon from "../Assets/humidity.png";
 import locationIcon from "../Assets/location.png";
-import siteIcon from "../Assets/siteIcon.png"
+import siteIcon from "../Assets/siteIcon.png";
 import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
 
 function Home() {
-
   const navigate = useNavigate();
   return (
     <div className={styles.homeContainer}>
@@ -49,7 +48,7 @@ function Home() {
                 alt="Temperature Icon"
                 className={styles.temperatureIcon}
               />
-              <h4>Feels Like :</h4>
+              <p className={styles.feelsLike}>Feels Like :</p>
               <p className={styles.temperatureValue}>28.1°C</p>
             </div>
 
@@ -59,7 +58,7 @@ function Home() {
                 alt="Humidity Icon"
                 className={styles.HumidityIcon}
               />
-              <h4>Feels Humid :</h4>
+               <p className={styles.feelsLike}>Feels Humid :</p>
               <p className={styles.humidityValue}>98%</p>
             </div>
           </div>
@@ -138,34 +137,57 @@ function Home() {
             Together For The Environmental Equity.
           </h2>
           <div className={styles.footer_buttons}>
-            <button className={styles.footer_btn} onClick={()=> navigate('/contact')}>Contact Us</button>
-            <button className={styles.footer_btn} onClick={()=> navigate('/about')}>About Us</button>
+            <button
+              className={styles.footer_btn}
+              onClick={() => navigate("/contact")}
+            >
+              Contact Us
+            </button>
+            <button
+              className={styles.footer_btn}
+              onClick={() => navigate("/about")}
+            >
+              About Us
+            </button>
           </div>
         </div>
         <div className={styles.lowerFooter}>
-             <div className={styles.footerIndoorAir}>
-                    <div className={styles.IndoorAirBox_logo}>
+          <div className={styles.footerIndoorAir}>
+            <div className={styles.IndoorAirBox_logo}>
+              <img
+                src={siteIcon}
+                alt="website icon"
+                className={styles.siteIcon}
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              />
 
-                      <img src={siteIcon} alt="website icon" className={styles.siteIcon}
-                       onClick={() => window.scrollTo({top : 0 , behavior : 'smooth'})}/>
-
-                      <h2 className={styles.footerIndoorAirHeading}>Indoor<span className={styles.span}>AIR</span></h2>
-                    </div>
-                    <p className={styles.footerSlogan}>Breathe by Breathe, Building healthier world.</p>
-              </div>
-              <hr />
+              <h2 className={styles.footerIndoorAirHeading} onClick={() => window.scrollTo({top:0 , behavior : "smooth"})}>
+                Indoor<span className={styles.span}>AIR</span>
+              </h2>
+            </div>
+            <p className={styles.footerSlogan}>
+              Breathe by Breathe, Building healthier world.
+            </p>
+          </div>
+          <hr />
 
           <div className={styles.footerLinks}>
-            <p className={styles.AllRights}>© 2024 Indoor AIR. All rights reserved.</p>
-                 <ul className={styles.footerLinkLists}>
-                      <li className={styles.privacyPolicy}>
-                        <Link to="/privacy-policy" className={styles.footerLink}>Privacy Policy</Link>
-                      </li>
-                      <li className={styles.termsOfService}>
-                        <Link to="/terms-of-service" className={styles.footerLink}>Terms of Service</Link>  
-                        </li>
-                 </ul>
-            </div>
+            <p className={styles.AllRights}>
+              © 2024 Indoor AIR. All rights reserved.
+            </p>
+            <ul className={styles.footerLinkLists}>
+              <li className={styles.privacyPolicy}>
+                <Link to="/privacy-policy" className={styles.footerLink}>
+                  Privacy Policy
+                </Link>
+              </li>
+              <li className={styles.termsOfService}>
+                <Link to="/terms-of-service" className={styles.footerLink}>
+                  Terms of Service
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </footer>
     </div>
