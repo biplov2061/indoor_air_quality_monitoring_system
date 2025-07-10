@@ -1,10 +1,10 @@
 // src/components/Navbar.js
 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import siteIcon from "../Assets/siteIcon.png";
 import styles from './Navbar.module.css';
-import login from '../Assets/login_logo.jpg';
+// import login from '../Assets/login_logo.jpg';
 
 
 
@@ -44,9 +44,9 @@ function Navbar() {
 
       {/* Admin login on the right */}
       <div className={styles.adminLogin}>
-        <Link to="/admin">
+        {/* <Link to="/admin">
              <img src={login} alt="Site Logo" />
-        </Link>
+        </Link> */}
       </div>
     </nav>
   );

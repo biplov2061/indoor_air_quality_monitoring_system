@@ -22,6 +22,7 @@
 /* Center navigation links */
 .navLinks {
   display: flex;
+  margin-left: -400px;
   gap: 60px;
   list-style: none;
   margin: 0;

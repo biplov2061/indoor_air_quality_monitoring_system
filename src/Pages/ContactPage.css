@@ -12,7 +12,7 @@ body, html {
 }
 
 .contact-container {
-  padding: 20px;
+  padding: 5px;
   max-width: 1200px;
   margin: auto;
 }
@@ -22,29 +22,34 @@ body, html {
 /* Heading */
 .contact-heading {
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  padding-top: 10px;
+  margin-top: 45px;
+  margin-bottom: 60px;
+  padding-bottom: 25px;
 }
 
 .contact-heading h1 {
-  padding-top: 20px;
-  font-size: 38px;
+  margin-top: 0px;
+  padding-top: 15px;
+  font-size: 3.65rem;
   font-weight: bold;
   margin-bottom: 8px;
 }
 
 /* Layout */
 .contact-content {
+  margin-top: 65px;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   justify-content: space-between;
+  margin-bottom: 190px;
 }
 
 /* Form section */
 .contact-form {
   flex: 1;
-  min-width: 300px;
+  min-width: 350px;
   border: 1px solid #ddd;
   padding: 20px;
   border-radius: 8px;

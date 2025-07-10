@@ -36,18 +36,21 @@
 }
 
 .indoor-air-title {
-  font-size: 38px;
+  font-size: 3.65rem;
   font-weight: bold;
+  margin-bottom: 50px;
 }
 
 .indoor-air-vision-box {
-  width: 80%;
+  width: 52%;
   margin: 24px auto;
+  
   padding: 16px;
   border: 1px solid #ccc;
   background: #f9f9f9;
   border-radius: 8px;
   text-align: left;
+  margin-bottom: 115px;
 }
 
 
@@ -67,12 +70,13 @@
 .indoor-air-about {
   text-align: center;
   padding: 40px 32px;
+  
 }
 
 .indoor-air-about-heading {
-  font-size: 24px;
+  font-size: 40px;
   font-weight: bold;
-  margin-bottom: 16px;
+  margin-bottom: 40px;
 }
 
 .indoor-air-highlight {
@@ -80,6 +84,7 @@
 }
 
 .indoor-air-about-text {
+ 
   max-width: 800px;
   margin: 12px auto;
   text-align: justify;
@@ -89,10 +94,11 @@
 .indoor-air-team {
   text-align: center;
   margin-top: 48px;
+  margin-top: 115px;
 }
 
 .indoor-air-team-heading {
-  font-size: 32px;
+  font-size: 50px;
   font-weight: bold;
   margin-bottom: 24px;
 }
@@ -100,8 +106,10 @@
 .indoor-air-team-list {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 40px;
   flex-wrap: wrap;
+  margin-bottom: 170px;
+
 }
 
 .indoor-air-team-member {
