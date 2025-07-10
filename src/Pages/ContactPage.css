@@ -1,0 +1,120 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+.contact_container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+
+/* Heading */
+.contact_heading {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.contact_heading h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Layout */
+.contact_content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+/* Form section */
+.contact_form {
+  flex: 1;
+  min-width: 300px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.contact_form h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.contact_form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_form label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.contact_form input,
+.contact_form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact_form textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.contact_form button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Info section */
+.contact_info {
+  flex: 1;
+  min-width: 250px;
+ 
+  
+}
+
+.contact_info h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+ 
+}
+
+.info_block {
+  margin-bottom: 30px;
+}
+
+.info_block strong {
+  display: block;
+  margin-bottom: 5px;
+}
+input {
+  width: 100%; /* or fixed like 300px */
+  padding: 8px;
+  margin: 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+

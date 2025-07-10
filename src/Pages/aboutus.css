@@ -1,0 +1,122 @@
+.indoor-air-container {
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 0;
+  margin: 0;
+}
+
+.indoor-air-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 16px 32px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.indoor-air-value-img{
+    height: 50px;
+    width: 30px;
+}
+
+.indoor-air-logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.indoor-air-nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.indoor-air-nav a:hover {
+  color: #007BFF;
+}
+
+.indoor-air-hero {
+  text-align: center;
+  margin-top: 48px;
+}
+
+.indoor-air-title {
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.indoor-air-vision-box {
+  width: 80%;
+  margin: 24px auto;
+  padding: 16px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  border-radius: 8px;
+  text-align: left;
+}
+
+
+
+.indoor-air-vision-title {
+  font-weight: 400;
+  font-size: 20px;
+  font-weight: bold;
+  
+}
+
+.indoor-air-vision-text {
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.indoor-air-about {
+  text-align: center;
+  padding: 40px 32px;
+}
+
+.indoor-air-about-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.indoor-air-highlight {
+  color: #007BFF;
+}
+
+.indoor-air-about-text {
+  max-width: 800px;
+  margin: 12px auto;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.indoor-air-team {
+  text-align: center;
+  margin-top: 48px;
+}
+
+.indoor-air-team-heading {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.indoor-air-team-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.indoor-air-team-member {
+  width: 100px;
+  height: 100px;
+  background: #ddd;
+  border-radius: 50%;
+}
+
+.indoor-air-footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 12px;
+  color: #777;
+}
