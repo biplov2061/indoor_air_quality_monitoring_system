@@ -10,6 +10,7 @@
   padding: 0 20px;             /* Horizontal spacing */
   box-sizing: border-box;
   color: rgb(0, 0, 0);
+  
 }
 
 /* Logo styles */
@@ -36,9 +37,23 @@
 }
 
 .navLinks li a:hover {
-  color: #093fb4;
+  color: #2576e7;
 
 }
+
+
+/* Active link styles */
+
+.active_link{
+  color: #2576e7;
+}
+
+/* Inactive link styles */
+
+.inactive_link{
+  color: rgb(17, 17, 17);
+}
+
 
 /* Admin login on the right */
 .adminLogin img {
