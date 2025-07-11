@@ -181,7 +181,7 @@ const handleSubmit = (e) =>{
                     onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                   />
     
-                  <h2 className={styles.footerIndoorAirHeading} onClick={() => window.scrollTo({top:0 , behavior : "smooth"})}>
+                  <h2 className={styles.footerIndoorAirHeading} onClick={() => navigate("/")}>
                     Indoor<span className={styles.span}>AIR</span>
                   </h2>
                 </div>

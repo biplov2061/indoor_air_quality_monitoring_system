@@ -11,6 +11,9 @@ export default function AdminLogin() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add your login logic here
+    if(username === "admin" && password === "admin123"){
+      navigate("/dashboard");
+    }
     console.log("Login attempt:", { username, password, rememberMe });
   };
 
@@ -63,7 +66,7 @@ export default function AdminLogin() {
                   checked={rememberMe}
                   onChange={(e) => setRememberMe(e.target.checked)}
                 />
-                <label htmlFor="rememberMe">Remember me</label>
+                <label>Remember me</label>
               </div>
               <a href="#" className={styles.forgotPassword}>
                 Forgot password?

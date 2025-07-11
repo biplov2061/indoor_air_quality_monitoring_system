@@ -10,7 +10,7 @@ const Recommendation = () => {
       sensitiveGroup: "Safe",
       maskUses: "Not required",
       indoorAir: "Not required",
-      color: "#90EE90",
+      color: "#31b121ff",
     },
     {
       range: "51-100",
@@ -19,7 +19,7 @@ const Recommendation = () => {
       sensitiveGroup: "Consider reducing prolonged outdoor exertion",
       maskUses: "Optional",
       indoorAir: "Optional",
-      color: "#FFFF00",
+      color: "#ffff5dff",
     },
     {
       range: "101-150",
@@ -28,7 +28,7 @@ const Recommendation = () => {
       sensitiveGroup: "Limit prolonged or heavy outdoor exertion",
       maskUses: "Recommended (N95/KN95 preferred)",
       indoorAir: "Use indoors if sensitive or in polluted area",
-      color: "#FFA500",
+      color: "#ffc14dff",
     },
     {
       range: "151-200",
@@ -37,7 +37,7 @@ const Recommendation = () => {
       sensitiveGroup: "Avoid outdoor activity",
       maskUses: "Strongly recommended (N95/KN95)",
       indoorAir: "Recommended in indoor spaces",
-      color: "#FF0000",
+      color: "#f17762ff",
     },
     {
       range: "201-300",
@@ -46,7 +46,7 @@ const Recommendation = () => {
       sensitiveGroup: "Stay indoors, close windows",
       maskUses: "Mandatory (N95/KN95 only)",
       indoorAir: "Use in all indoor environments",
-      color: "#800080",
+      color: "#ce3636ff",
     },
     {
       range: "301-500",
@@ -55,7 +55,7 @@ const Recommendation = () => {
       sensitiveGroup: "Stay indoors with sealed windows",
       maskUses: "Mandatory (N95/KN95 with seal)",
       indoorAir: "Must-have in all indoor spaces",
-      color: "#800000",
+      color: "#d30f0fff",
     },
   ];
 
@@ -76,7 +76,7 @@ const Recommendation = () => {
           </thead>
           <tbody>
             {recommendations.map((item, index) => (
-              <tr key={index} style={{ backgroundColor: `${item.color}20` }}>
+              <tr key={index} style={{ backgroundColor: `${item.color}` }}>
                 <td>{item.range}</td>
                 <td>{item.category}</td>
                 <td>{item.generalPublic}</td>

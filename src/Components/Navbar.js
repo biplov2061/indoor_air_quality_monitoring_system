@@ -87,8 +87,10 @@ function Navbar() {
             Contact
           </NavLink>
         </li>
-
-        <li className={styles.settingsContainer}>
+      </ul>
+      
+      {/* Settings dropdown */}
+        <div className={styles.settingsContainer}>
           <button
             className={styles.settingsButton}
             onClick={() => setShowSettings(!showSettings)}
@@ -108,8 +110,8 @@ function Navbar() {
               </NavLink>
             </div>
           )}
-        </li>
-      </ul>
+        </div>
+      
     </nav>
   );
 }

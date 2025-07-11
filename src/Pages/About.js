@@ -5,6 +5,10 @@ import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import siteIcon from "../Assets/siteIcon.png";
+import biplov from "../Assets/biplov.jpg";
+import jenish from "../Assets/jenish.jpg";
+// import nita from "../Assets/nita.jpg";
+import aatish from "../Assets/aatish.jpg";
 
 
 export default function IndoorAirPage() {
@@ -16,8 +20,6 @@ export default function IndoorAirPage() {
         <h1 className="indoor-air-title">Beyond the Naked Eye</h1>
 
         <div className="indoor-air-vision-box">
-        
-
             <span className="indoor-air-vision-title">Our Vision</span>
          
           <p className="indoor-air-vision-text">
@@ -52,9 +54,31 @@ export default function IndoorAirPage() {
       <section className="indoor-air-team">
         <h2 className="indoor-air-team-heading">Our Team</h2>
         <div className="indoor-air-team-list">
-          {[1, 2, 3, 4].map((i) => (
-            <div key={i} className="indoor-air-team-member"></div>
-          ))}
+            <div className="indoor-air-team-member_box">
+                   <div className="indoor-air-team-member">
+                        <img src={biplov} alt="team member" className="team_photo"/>
+                   </div>
+                   <h4>Biplov gautam</h4>
+            </div>
+             <div className="indoor-air-team-member_box">
+                   <div className="indoor-air-team-member">
+                       <img src={"#"} alt="team member" className="team_photo"/>
+                   </div>
+                   <h4>Nita Dangol</h4>
+            </div>
+             <div className="indoor-air-team-member_box">
+                   <div className="indoor-air-team-member">
+                        <img src={jenish} alt="team member" className="team_photo" />
+                   </div>
+                   <h4>Jenish Bhattrai</h4>
+            </div>
+             <div className="indoor-air-team-member_box">
+                   <div className="indoor-air-team-member">
+                        <img src={aatish} alt="team member" className="team_photo"/>
+                   </div>
+                   <h4>Aatish Kumar Chaudhary</h4>
+            </div>
+           
         </div>
       </section>
 <footer className={styles.footer}>
@@ -82,7 +106,7 @@ export default function IndoorAirPage() {
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               />
 
-              <h2 className={styles.footerIndoorAirHeading} onClick={() => window.scrollTo({top:0 , behavior : "smooth"})}>
+              <h2 className={styles.footerIndoorAirHeading} onClick={() => navigate("/") && window.scrollTo({top:0 , behavior : "smooth"})}>
                 Indoor<span className={styles.span}>AIR</span>
               </h2>
             </div>

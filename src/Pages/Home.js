@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 
 function Home() {
   const navigate = useNavigate();
+
   return (
     <div className={styles.homeContainer}>
       <div className={styles.container}>
@@ -70,7 +71,7 @@ function Home() {
                   alt="Location Icon"
                   className={styles.locationIcon}
                 />
-                <p className={styles.locationText}>Lalitpur, Nepal</p>
+                <p className={styles.locationText}>Balkumari, Lalitpur</p>
               </div>
             </div>
             <div className={styles.locationRight}>
