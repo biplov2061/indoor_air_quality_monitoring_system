@@ -4,63 +4,133 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 70px;                /* 🔹 Set height */
-  width: 100%;                 /* 🔹 Default full width */
-  background-color: #ffffff;   /* Dark blue */
-  padding: 0 20px;             /* Horizontal spacing */
+  height: 70px; /* 🔹 Set height */
+  width: 100%; /* 🔹 Default full width */
+  background-color: #ffffff; /* Dark blue */
+  padding: 0 20px; /* Horizontal spacing */
   box-sizing: border-box;
   color: rgb(0, 0, 0);
-  
 }
 
 /* Logo styles */
 .logo img {
-  height: 45px;                /* Adjusted logo size to fit 70px navbar */
+  height: 45px; /* Adjusted logo size to fit 70px navbar */
   object-fit: contain;
+}
+
+/* Navigation links container */
+.navLinks {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.navLinks li {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 /* Center navigation links */
 .navLinks {
   display: flex;
-  margin-left: -400px;
-  gap: 60px;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 /* Link styles */
-.navLinks li a {
-  color: rgb(17, 17, 17);
+.navLinks a {
   text-decoration: none;
-  font-weight: 600;
-  font-size: 16px;
+  color: #333;
+  padding: 0 16px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
 }
 
-.navLinks li a:hover {
-  color: #2576e7;
-
+.navLinks a:hover {
+  color: #0052cc;
 }
-
 
 /* Active link styles */
 
-.active_link{
-  color: #2576e7;
+.active_link {
+  color: #0052cc !important;
+  font-weight: 500;
 }
 
 /* Inactive link styles */
 
-.inactive_link{
-  color: rgb(17, 17, 17);
+.inactive_link {
+  color: #333;
 }
-
 
 /* Admin login on the right */
 .adminLogin img {
-    height: 26px;                /* Adjusted logo size to fit 70px navbar */
+  height: 26px; /* Adjusted logo size to fit 70px navbar */
   object-fit: contain;
 }
 
+/* Settings button and dropdown styles */
+.settingsContainer {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+}
 
+.settingsButton {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  height: 40px;
+  width: 40px;
+}
 
+.settingsButton:hover {
+  color: #0052cc;
+  background-color: rgba(0, 82, 204, 0.1);
+  transform: rotate(30deg);
+}
+
+.settingsDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  min-width: 150px;
+  z-index: 1000;
+  margin-top: 8px;
+}
+
+.settingsDropdown a {
+  display: block;
+  padding: 8px 16px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  height: auto;
+}
+
+.settingsDropdown a:hover {
+  background-color: #f5f5f5;
+  color: #0052cc;
+}

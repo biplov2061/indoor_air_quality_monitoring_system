@@ -1,0 +1,82 @@
+.recommendationContainer {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.tableContainer {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.recommendationTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.recommendationTable th,
+.recommendationTable td {
+  padding: 1rem;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.recommendationTable th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+}
+
+.recommendationTable tr:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.additionalInfo {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.infoSection {
+  margin-bottom: 1.5rem;
+}
+
+.infoSection:last-child {
+  margin-bottom: 0;
+}
+
+.infoSection h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.infoSection p {
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.infoSection ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.infoSection li {
+  color: #666;
+  line-height: 1.5;
+  margin: 0.25rem 0;
+}

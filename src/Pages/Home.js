@@ -17,7 +17,7 @@ function Home() {
         <div className={styles.leftBox}>
           <h1 className={styles.heading1}>Breathe by Breathe</h1>
           <h1 className={styles.heading2}>
-            <span className={styles.blueText}>Building</span> a,
+            <span className={styles.blueText}>Building</span>
           </h1>
           <h1 className={styles.heading3}>Healthier</h1>
           <h1 className={styles.heading4}>World.</h1>
@@ -58,7 +58,7 @@ function Home() {
                 alt="Humidity Icon"
                 className={styles.HumidityIcon}
               />
-               <p className={styles.feelsLike}>Feels Humid :</p>
+              <p className={styles.feelsLike}>Feels Humid :</p>
               <p className={styles.humidityValue}>98%</p>
             </div>
           </div>
@@ -161,7 +161,10 @@ function Home() {
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               />
 
-              <h2 className={styles.footerIndoorAirHeading} onClick={() => window.scrollTo({top:0 , behavior : "smooth"})}>
+              <h2
+                className={styles.footerIndoorAirHeading}
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              >
                 Indoor<span className={styles.span}>AIR</span>
               </h2>
             </div>

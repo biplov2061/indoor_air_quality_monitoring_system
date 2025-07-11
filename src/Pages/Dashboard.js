@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Dashboard.module.css";
 import upArrow from "../Assets/up-arrow.png";
 import mask from "../Assets/icon-mask.png";
@@ -27,6 +28,8 @@ function generateCurrentDateTime() {
 }
 
 export default function Dashboard() {
+  const navigate = useNavigate();
+
   const airQualityData = [
     { label: "MQ135", value: 50, status: "good" },
     { label: "ESP32", value: "105°C", status: "good" },
@@ -101,7 +104,7 @@ export default function Dashboard() {
 
             <button
               className={styles.viewMoreLink}
-              onClick={() => console.log("View more safety measures")}
+              onClick={() => navigate("/recommendation")}
             >
               View more safety measures →
             </button>
@@ -140,7 +143,9 @@ export default function Dashboard() {
       </div>
 
       <div className={styles.footer}>
-        <h1 className={styles.pollutants_concentration_h1 }>24 Hour pollutants concentration</h1>
+        <h1 className={styles.pollutants_concentration_h1}>
+          24 Hour pollutants concentration
+        </h1>
         <PollutionChart />
       </div>
 
@@ -154,7 +159,7 @@ export default function Dashboard() {
           </p>
           <button
             className={styles.measuresButton}
-            onClick={() => console.log("View Safety measures")}
+            onClick={() => navigate("/recommendation")}
           >
             View Saftey measures
           </button>

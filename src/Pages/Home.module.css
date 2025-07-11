@@ -1,10 +1,8 @@
 /* src/components/HomeContent/HomeContent.module.css */
 
-
-
 .container {
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   align-items: center;
   padding: 40px 60px;
   min-height: 550px;
@@ -24,7 +22,6 @@
   font-weight: bold;
   color: #000000;
   margin-bottom: 8px;
- 
 }
 
 .heading2 {
@@ -33,11 +30,10 @@
   color: #0c0c0c;
   margin-bottom: 0;
   margin-top: 0;
-
 }
 
-.blueText{
-     color:#093fb4;;
+.blueText {
+  color: #093fb4;
 }
 
 .heading3 {
@@ -47,7 +43,6 @@
   font-style: italic;
   margin-top: 0;
   margin-bottom: 0;
-
 }
 
 .heading4 {
@@ -55,7 +50,6 @@
   font-weight: bold;
   color: #000000;
   margin-top: 0;
-
 }
 
 .subtext {
@@ -72,7 +66,6 @@
   flex-direction: column;
   gap: 20px;
   height: 260px;
-  
 }
 
 .right_IQA_Box {
@@ -81,20 +74,18 @@
   border-radius: 10px;
   background-color: #ffffff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  height: 120px;;
+  height: 120px;
   padding-bottom: 25px;
   padding-top: 25px;
-  
 }
 
-.Termerature_Humidity_Box{
+.Termerature_Humidity_Box {
   flex: 1;
   display: flex;
   border-radius: 10px;
   background-color: #ffffff;
   gap: 10px;
 }
-
 
 .Temperature_logo_text {
   display: flex;
@@ -106,21 +97,19 @@
   padding-left: 7px;
 }
 
-
-.temperatureIcon{
+.temperatureIcon {
   width: 28px;
   height: 27px;
 }
 
-
-.Humidity_logo_text{
-   display: flex;
+.Humidity_logo_text {
+  display: flex;
   align-items: center;
   box-shadow: 0 4px 10px rgba(18, 17, 17, 0.2);
   height: 46px;
   width: 50%;
-   border-radius: 10px;
-  padding-left: 13px
+  border-radius: 10px;
+  padding-left: 13px;
 }
 
 .HumidityIcon {
@@ -129,16 +118,13 @@
   margin-right: 10px;
 }
 
-
-
 /*Text styles for Temperature and Humidity*/
-h4{
+h4 {
   font-size: 14px;
   font-weight: 600;
   margin: 0;
   color: #1f1e1e;
 }
-
 
 .aqiValue {
   font-size: 18px;
@@ -152,9 +138,7 @@ h4{
   margin-top: 17px;
 }
 
-
-.Location_Box
-{
+.Location_Box {
   display: flex;
   align-items: center;
   box-shadow: 0 4px 10px rgba(18, 17, 17, 0.2);
@@ -164,40 +148,40 @@ h4{
   justify-content: space-between;
 }
 
-.ViewDashboard{
+.ViewDashboard {
   margin-right: 20px;
   font-size: 13px;
   text-decoration: none;
   font-weight: 600;
 }
 
-.Link{
-  color:  #5aa2ee;
+.Link {
+  color: #5aa2ee;
   font-weight: 100;
 }
 
-.Link:hover{
+.Link:hover {
   color: #1659e8;
 }
 
-.temperatureValue , .humidityValue{
+.temperatureValue,
+.humidityValue {
   margin-left: 25px;
 }
 
-
-.locationIcon_text{
+.locationIcon_text {
   display: flex;
-  align-items: center; 
+  align-items: center;
   height: fit-content;
 }
 
-.locationIcon{
+.locationIcon {
   width: 17px;
   height: 19px;
   margin-right: 6px;
 }
 
-.checkAirQualityBtn{
+.checkAirQualityBtn {
   color: rgb(255, 255, 255);
   background-color: #093fb4;
   border: 1px solid #093fb4;
@@ -206,18 +190,16 @@ h4{
   width: 140px;
 }
 
-.checkAirQualityBtn:hover{
+.checkAirQualityBtn:hover {
   background-color: #ffffff;
   color: #093fb4;
   border: 1px solid #093fb4;
   cursor: pointer;
 }
 
-
 /* About Section */
 
-
-.AboutContainer{
+.AboutContainer {
   width: 100%;
   margin: 0 auto;
   /* border: 1px solid #ddd; */
@@ -231,11 +213,11 @@ h4{
 }
 
 .about_container {
- width: 50%;
+  width: 50%;
   margin: 0 auto;
   padding: 10px;
   border-radius: 12px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin-bottom: 40px;
   height: 100%;
 }
@@ -268,11 +250,10 @@ h4{
   }
 }
 
-
 /* Our Solution Section */
 
-.ourSolutionMainContainer{
-    width: 100%;
+.ourSolutionMainContainer {
+  width: 100%;
   margin: 0 auto;
   /* border: 1px solid #ddd; */
   margin-top: 30px;
@@ -280,18 +261,17 @@ h4{
   margin-bottom: 150px;
 }
 
-
 .solutions_container {
   max-width: 1000px;
   margin: 60px auto;
   padding: 10px;
   background-color: #ffffff;
   border-radius: 12px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .solutions_heading {
-   font-size: 60px;
+  font-size: 60px;
   color: #2c3e50;
   margin-bottom: 20px;
   text-align: center;
@@ -336,8 +316,6 @@ h4{
   }
 }
 
-
-
 /*Footer Section*/
 
 .footer {
@@ -349,7 +327,7 @@ h4{
   height: fit-content;
 }
 
-.upperFooter{
+.upperFooter {
   background-color: #093fb4;
   color: white;
   padding: 70px 20px;
@@ -388,7 +366,7 @@ h4{
   border: 1px solid #ffffff;
 }
 
-.lowerFooter{
+.lowerFooter {
   background-color: white;
   color: rgb(0, 0, 0);
   padding: 40px 20px;
@@ -397,14 +375,14 @@ h4{
   margin-top: 10px;
 }
 
-.footerIndoorAir{
+.footerIndoorAir {
   width: 300px;
   height: 100%;
   border-radius: 10px;
   margin-bottom: 60px;
 }
 
-.IndoorAirBox_logo{
+.IndoorAirBox_logo {
   display: flex;
   align-items: center;
   height: fit-content;
@@ -414,66 +392,62 @@ h4{
   gap: 0;
 }
 
-.siteIcon{
+.siteIcon {
   width: 78px;
   height: 42px;
 }
 
-.siteIcon:hover{
+.siteIcon:hover {
   cursor: pointer;
 }
 
-.footerIndoorAirHeading{
+.footerIndoorAirHeading {
   font-size: 30px;
   font-weight: 800;
 }
 
-.footerIndoorAirHeading:hover{
+.footerIndoorAirHeading:hover {
   cursor: pointer;
 }
 
-.span{
+.span {
   color: #2576e7;
   font-weight: 800;
 }
 
-.footerSlogan{
+.footerSlogan {
   font-size: 14px;
   margin: 0;
 }
 
-.footerLinks{
+.footerLinks {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 20px;
 }
 
-.AllRights{
+.AllRights {
   font-size: 13px;
   color: #666565;
 }
 
-.footerLinkLists{
+.footerLinkLists {
   display: flex;
   gap: 30px;
 }
 
-.footerLinkLists li{
+.footerLinkLists li {
   text-decoration: none;
   color: white;
 }
 
-.footerLink{
-   color: #666565;
+.footerLink {
+  color: #666565;
   text-decoration: none;
   font-size: 13px;
 }
 
-.footerLink:hover{
-  color:blue
-
+.footerLink:hover {
+  color: blue;
 }
-
-
-

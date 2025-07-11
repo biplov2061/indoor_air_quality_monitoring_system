@@ -7,6 +7,7 @@ import AdminLogin from "./Pages/AdminLogin";
 import Dashboard from "./Pages/Dashboard";
 import About from "./Pages/About";
 import Contact from "./Pages/ContactUs";
+import Recommendation from "./Components/Recommendation";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="admin" element={<AdminLogin />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="recommendation" element={<Recommendation />} />
         </Route>
       </Routes>
     </BrowserRouter>
