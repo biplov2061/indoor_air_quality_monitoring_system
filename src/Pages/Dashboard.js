@@ -170,7 +170,7 @@ export default function Dashboard() {
         <h2>Sensor Location</h2>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.8299999999995!2d85.3365632!3d27.6713817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19e8af4a5fe3%3A0x963d00cdf478c6b6!2sNepal%20College%20of%20Information%20Technology!5e0!3m2!1sen!2snp!4v1625555555555!5m2!1sen!2snp"
-          width="1300"
+          width="1000"
           height="500"
           style={{ border: 0 }}
           allowFullScreen=""

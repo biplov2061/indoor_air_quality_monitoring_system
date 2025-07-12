@@ -8,15 +8,27 @@ import Dashboard from "./Pages/Dashboard";
 import About from "./Pages/About";
 import Contact from "./Pages/ContactUs";
 import Recommendation from "./Components/Recommendation";
+import Navbar from "./Components/Navbar";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* Admin login route without footer */}
+        <Route
+          path="/admin"
+          element={
+            <div>
+              <Navbar />
+              <AdminLogin />
+            </div>
+          }
+        />
+
+        {/* All other routes with Layout (includes footer) */}
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="dashboard" element={<Dashboard />} />
-          <Route path="admin" element={<AdminLogin />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="recommendation" element={<Recommendation />} />
