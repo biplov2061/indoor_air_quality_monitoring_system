@@ -25,7 +25,8 @@
 
 .loginContent {
   margin: auto;
-  padding: 40px;
+  padding: 30px;
+  padding-bottom: 35px;
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -96,17 +97,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 
 .rememberMe {
   display: flex;
   align-items: center;
-  gap: 8px;
+  
 }
 
 .rememberMe input[type="checkbox"] {
   margin: 0;
+  padding: 0;
+  width: 16px;
+  margin-right: 3px;
 }
 
 .rememberMe label {
