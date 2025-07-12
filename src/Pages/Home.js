@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import thermometerIcon from "../Assets/high-temperature.png";
 import HumidityIcon from "../Assets/humidity.png";
 import locationIcon from "../Assets/location.png";
-import siteIcon from "../Assets/siteIcon.png";
 import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
 
@@ -131,68 +130,6 @@ function Home() {
           </div>
         </div>
       </div>
-      <footer className={styles.footer}>
-        <div className={styles.upperFooter}>
-          <h2 className={styles.footer_heading}>
-            Together For The Environmental Equity.
-          </h2>
-          <div className={styles.footer_buttons}>
-            <button
-              className={styles.footer_btn}
-              onClick={() => navigate("/contact")}
-            >
-              Contact Us
-            </button>
-            <button
-              className={styles.footer_btn}
-              onClick={() => navigate("/about")}
-            >
-              About Us
-            </button>
-          </div>
-        </div>
-        <div className={styles.lowerFooter}>
-          <div className={styles.footerIndoorAir}>
-            <div className={styles.IndoorAirBox_logo}>
-              <img
-                src={siteIcon}
-                alt="website icon"
-                className={styles.siteIcon}
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              />
-
-              <h2
-                className={styles.footerIndoorAirHeading}
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              >
-                Indoor<span className={styles.span}>AIR</span>
-              </h2>
-            </div>
-            <p className={styles.footerSlogan}>
-              Breathe by Breathe, Building healthier world.
-            </p>
-          </div>
-          <hr />
-
-          <div className={styles.footerLinks}>
-            <p className={styles.AllRights}>
-              © 2024 Indoor AIR. All rights reserved.
-            </p>
-            <ul className={styles.footerLinkLists}>
-              <li className={styles.privacyPolicy}>
-                <Link to="/privacy-policy" className={styles.footerLink}>
-                  Privacy Policy
-                </Link>
-              </li>
-              <li className={styles.termsOfService}>
-                <Link to="/terms-of-service" className={styles.footerLink}>
-                  Terms of Service
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
