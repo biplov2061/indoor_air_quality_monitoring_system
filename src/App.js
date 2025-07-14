@@ -9,6 +9,8 @@ import About from "./Pages/About";
 import Contact from "./Pages/ContactUs";
 import Recommendation from "./Components/Recommendation";
 import Navbar from "./Components/Navbar";
+import Sensor from "./Pages/Sensor";
+
 
 function App() {
   return (
@@ -24,13 +26,15 @@ function App() {
             </div>
           }
         />
+        
 
         {/* All other routes with Layout (includes footer) */}
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
+          <Route index element={<Home hello="hello"/>} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
+           <Route path="sensor" element={<Sensor />} />
           <Route path="recommendation" element={<Recommendation />} />
         </Route>
       </Routes>

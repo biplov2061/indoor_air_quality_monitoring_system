@@ -2,7 +2,7 @@ import React from "react";
 import "./aboutus.css"; // Import external CSS
 import biplov from "../Assets/biplov.jpg";
 import jenish from "../Assets/jenish.jpg";
-// import nita from "../Assets/nita.jpg";
+import nita from "../Assets/nita.jpeg";
 import aatish from "../Assets/aatish.jpg";
 
 export default function IndoorAirPage() {
@@ -55,7 +55,7 @@ export default function IndoorAirPage() {
           </div>
           <div className="indoor-air-team-member_box">
             <div className="indoor-air-team-member">
-              <img src={"#"} alt="team member" className="team_photo" />
+              <img src={nita} alt="team member" className="team_photo" />
             </div>
             <h4>Nita Dangol</h4>
           </div>

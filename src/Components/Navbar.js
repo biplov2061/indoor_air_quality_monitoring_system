@@ -87,31 +87,40 @@ function Navbar() {
             Contact
           </NavLink>
         </li>
-      </ul>
-      
-      {/* Settings dropdown */}
-        <div className={styles.settingsContainer}>
-          <button
-            className={styles.settingsButton}
-            onClick={() => setShowSettings(!showSettings)}
-            title="Settings"
+        <li>
+          <NavLink
+            to="sensor"
+            className={({ isActive }) =>
+              isActive ? styles.active_link : styles.inactive_link
+            }
           >
-            <SettingsIcon />
-          </button>
-          {showSettings && (
-            <div className={styles.settingsDropdown}>
-              <NavLink
-                to="/admin"
-                className={({ isActive }) =>
-                  isActive ? styles.active_link : styles.inactive_link
-                }
-              >
-                Admin Login
-              </NavLink>
-            </div>
-          )}
-        </div>
-      
+            Sensor
+          </NavLink>
+        </li>
+      </ul>
+
+      {/* Settings dropdown */}
+      <div className={styles.settingsContainer}>
+        <button
+          className={styles.settingsButton}
+          onClick={() => setShowSettings(!showSettings)}
+          title="Settings"
+        >
+          <SettingsIcon />
+        </button>
+        {showSettings && (
+          <div className={styles.settingsDropdown}>
+            <NavLink
+              to="/admin"
+              className={({ isActive }) =>
+                isActive ? styles.active_link : styles.inactive_link
+              }
+            >
+              Admin Login
+            </NavLink>
+          </div>
+        )}
+      </div>
     </nav>
   );
 }

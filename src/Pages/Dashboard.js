@@ -71,7 +71,8 @@ export default function Dashboard() {
           <h2 className={styles.airQuality}>
             Air Quality <span className={styles.status}>: Hazardous</span>
           </h2>
-          <span className={styles.iaq}>IAQ value : 150</span>
+          <br />
+          <span className={styles.iaq}>IAQ : 150</span>
 
           <h3 className={styles.pollutionChange}>
             <img

@@ -18,14 +18,14 @@
 
 /* Slogan Text Styling */
 .heading1 {
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bold;
   color: #000000;
   margin-bottom: 8px;
 }
 
 .heading2 {
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bold;
   color: #0c0c0c;
   margin-bottom: 0;
@@ -37,7 +37,7 @@
 }
 
 .heading3 {
-  font-size: 82px;
+  font-size: 90px;
   font-weight: bold;
   color: #5eaf67;
   font-style: italic;
@@ -46,7 +46,7 @@
 }
 
 .heading4 {
-  font-size: 36px;
+  font-size: 50px;
   font-weight: bold;
   color: #000000;
   margin-top: 0;
@@ -127,14 +127,58 @@ h4 {
 }
 
 .aqiValue {
+  font-size: 22px;
+  /* color: #047804; */
+}
+
+
+.temperatureValue{
   font-size: 18px;
-  font-weight: 600;
-  color: #047804;
+
 }
 
 .status {
+  font-size: 16px;
+  margin-top: 17px;
+  color: #000000;
+}
+
+
+.good{
+  color:#047804;
   font-size: 18px;
-  color: #444;
+  margin-top: 17px;
+}
+
+.moderate{
+  color: rgba(223, 207, 34, 0.997);
+  font-size: 18px;
+  margin-top: 17px;
+}
+
+
+.undealthySensitive{
+  color: rgb(253, 130, 53);
+  font-size: 18px;
+  margin-top: 17px;
+
+}
+
+.unhealthy{
+  color:rgb(245, 68, 68);
+  font-size: 18px;
+  margin-top: 17px;
+}
+
+.veryUnhealthy{
+  color: rgb(255, 0, 0);
+  font-size: 18px;
+  margin-top: 17px;
+}
+
+.hazardous{
+  color: rgb(183, 3, 3);
+  font-size: 18px;
   margin-top: 17px;
 }
 
@@ -166,7 +210,7 @@ h4 {
 
 .temperatureValue,
 .humidityValue {
-  margin-left: 25px;
+  margin-left: 8px;
 }
 
 .locationIcon_text {
@@ -204,7 +248,7 @@ h4 {
   margin: 0 auto;
   /* border: 1px solid #ddd; */
   margin-top: 60px;
-  background-color: #fafafa;
+  background-color: #f4f4f4;
   margin-bottom: 90px;
   padding: 50px 0;
   height: 360px;

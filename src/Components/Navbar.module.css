@@ -24,6 +24,7 @@
   display: flex;
   font-weight: 400;
   align-items: center;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 /* Center navigation links */
@@ -33,7 +34,7 @@
   list-style: none;
   padding: 0;
   height: 100%;
-  gap: 24px;
+  gap: 20px;
   
 }
 

@@ -1,14 +1,77 @@
 // src/components/HomeContent/HomeContent.js
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import thermometerIcon from "../Assets/high-temperature.png";
 import HumidityIcon from "../Assets/humidity.png";
 import locationIcon from "../Assets/location.png";
 import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
+import classNames from "classnames";
 
 function Home() {
   const navigate = useNavigate();
+  const [IaqData, setIaqData] = React.useState('Loading...');
+  const [temperature , setTemperature] = React.useState("");
+  const [humidity , setHumidity] = React.useState("");
+  const [status, setStatus] = React.useState("Moderate");
+
+
+  useEffect(() => {
+    const fetchData = () => {
+      fetch("http://localhost:8080/iqa/data/latest")
+        .then((res) => {
+
+          if(!res.ok){
+             throw new Error("Network response was not ok " + res.statusText);
+          }
+         return res.json();
+        })
+
+        .then((data) => {
+          console.log(data);
+          setIaqData(data.ppm)
+          setTemperature(data.temperature)
+          setHumidity(data.humidity)
+       })
+        
+        .catch((err) => {
+          console.error("Error fetching sensor data:", err)
+          setIaqData('Error fetching data');
+          setStatus("Error");
+    });
+
+
+        // Determine status based on sensor data
+      if (IaqData < 500) {
+        setStatus("Good");
+      } else if (IaqData >= 500 && IaqData < 600) {
+        setStatus("Moderate");
+      } else if (IaqData >= 600 && IaqData < 700) {
+        setStatus("Unhealthy for Sensitive Groups");
+      } else if (IaqData >= 700 && IaqData < 800) {
+        setStatus("Unhealthy");
+      } else if (IaqData >= 800) {
+        setStatus("Very Unhealthy");
+      }
+   
+      
+    };     
+
+    fetchData();
+
+    const interval = setInterval(fetchData, 15000);
+    return () => clearInterval(interval);
+  });
+
+
+   const statusClass = classNames({
+        [styles.good] : IaqData < 500,
+        [styles.moderate] :IaqData >= 500 && IaqData < 600,
+        [styles.undealthySensitive] : IaqData >= 600 && IaqData < 700,
+        [styles.unhealthy] : IaqData >= 700 && IaqData < 800,
+        [styles.veryUnhealthy] : IaqData >= 800 && IaqData < 900,
+        [styles.hazardous] : IaqData >= 900,
+      });
 
   return (
     <div className={styles.homeContainer}>
@@ -38,8 +101,8 @@ function Home() {
         {/* Right Box – AQI Data */}
         <div className={styles.rightBox}>
           <div className={styles.right_IQA_Box}>
-            <p className={styles.aqiValue}>IAQ: 78</p>
-            <p className={styles.status}>Status: Moderate</p>
+            <p className={styles.aqiValue}>IAQ :    <b>{IaqData}</b></p>
+            <p className={styles.status}>Status :   <b className={statusClass}>{status}</b></p>
           </div>
           <div className={styles.Termerature_Humidity_Box}>
             <div className={styles.Temperature_logo_text}>
@@ -49,7 +112,7 @@ function Home() {
                 className={styles.temperatureIcon}
               />
               <p className={styles.feelsLike}>Feels Like :</p>
-              <p className={styles.temperatureValue}>28.1°C</p>
+              <p className={styles.temperatureValue}>{(temperature * 12).toFixed(1)}°C</p>
             </div>
 
             <div className={styles.Humidity_logo_text}>
@@ -58,8 +121,8 @@ function Home() {
                 alt="Humidity Icon"
                 className={styles.HumidityIcon}
               />
-              <p className={styles.feelsLike}>Feels Humid :</p>
-              <p className={styles.humidityValue}>98%</p>
+              <p className={styles.feelsLike}>Humidity :</p>
+              <p className={styles.humidityValue}>{humidity} %</p>
             </div>
           </div>
           <div className={styles.Location_Box}>
