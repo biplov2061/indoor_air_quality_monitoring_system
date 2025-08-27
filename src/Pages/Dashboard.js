@@ -6,9 +6,11 @@ import mask from "../Assets/icon-mask.png";
 import closeDoors from "../Assets/icon-locked-inside.png";
 import feelsLike from "../Assets/high-temperature.png";
 import cloud from "../Assets/clould.jpg";
-import humidity from "../Assets/humidity.png";
+import humidityIcon from "../Assets/humidity.png";
 import PollutionChart from "../Components/PollutionChart";
 import IAQIndicator from "../Components/IAQIndicator";
+import { useContext } from "react";
+import { IaqContext } from "./IaqContext";
 
 function generateCurrentDateTime() {
   const now = new Date();
@@ -29,6 +31,7 @@ function generateCurrentDateTime() {
 
 export default function Dashboard() {
   const navigate = useNavigate();
+  const { IaqData, temperature, humidity, status } = useContext(IaqContext);
 
   const airQualityData = [
     { label: "MQ135", value: 50, status: "good" },
@@ -69,10 +72,9 @@ export default function Dashboard() {
       <div className={styles.content}>
         <section className={styles.leftSection}>
           <h2 className={styles.airQuality}>
-            Air Quality <span className={styles.status}>: Hazardous</span>
+            Air Quality <span className={styles.status}>: {status}</span>
           </h2>
-          <br />
-          <span className={styles.iaq}>IAQ : 150</span>
+          <span className={styles.iaq}>IAQ : {IaqData}</span>
 
           <h3 className={styles.pollutionChange}>
             <img
@@ -125,20 +127,20 @@ export default function Dashboard() {
             <h5>current</h5>
             <h2 className={styles.value}>
               <img src={cloud} className={styles.valueImg} alt="cloud icon" />
-              24.9°C
+              {temperature}°C
             </h2>
           </section>
           <section className={styles.humidity}>
             <h3>
               <img
-                src={humidity}
+                src={humidityIcon}
                 className={styles.humidityImg}
                 alt="humidity icon"
               />
               Humidity
             </h3>
             <h5>current</h5>
-            <h2 className={styles.value}>65%</h2>
+            <h2 className={styles.value}>{humidity}%</h2>
           </section>
         </section>
       </div>
@@ -151,10 +153,10 @@ export default function Dashboard() {
       </div>
 
       <div className={styles.iaqIndicator}>
-        <IAQIndicator value={100} />
+        <IAQIndicator value={IaqData} />
         <div className={styles.iaqDetails}>
-          <span className={styles.iaqValue}>100</span>
-          <span className={styles.iaqCondition}>Unhealthy</span>
+          <span className={styles.iaqValue}>{IaqData}</span>
+          <span className={styles.iaqCondition}>{status}</span>
           <p className={styles.iaqRecommend}>
             (We highly recommend to follow saftey measures)
           </p>

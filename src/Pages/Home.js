@@ -1,5 +1,4 @@
 // src/components/HomeContent/HomeContent.js
-import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import thermometerIcon from "../Assets/high-temperature.png";
 import HumidityIcon from "../Assets/humidity.png";
@@ -7,61 +6,12 @@ import locationIcon from "../Assets/location.png";
 import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
+import { useContext } from "react";
+import { IaqContext } from "./IaqContext";
 
 function Home() {
   const navigate = useNavigate();
-  const [IaqData, setIaqData] = React.useState('Loading...');
-  const [temperature , setTemperature] = React.useState("");
-  const [humidity , setHumidity] = React.useState("");
-  const [status, setStatus] = React.useState("Moderate");
-
-
-  useEffect(() => {
-    const fetchData = () => {
-      fetch("http://localhost:8080/iqa/data/latest")
-        .then((res) => {
-
-          if(!res.ok){
-             throw new Error("Network response was not ok " + res.statusText);
-          }
-         return res.json();
-        })
-
-        .then((data) => {
-          console.log(data);
-          setIaqData(data.ppm)
-          setTemperature(data.temperature)
-          setHumidity(data.humidity)
-       })
-        
-        .catch((err) => {
-          console.error("Error fetching sensor data:", err)
-          setIaqData('Error fetching data');
-          setStatus("Error");
-    });
-
-
-        // Determine status based on sensor data
-      if (IaqData < 500) {
-        setStatus("Good");
-      } else if (IaqData >= 500 && IaqData < 600) {
-        setStatus("Moderate");
-      } else if (IaqData >= 600 && IaqData < 700) {
-        setStatus("Unhealthy for Sensitive Groups");
-      } else if (IaqData >= 700 && IaqData < 800) {
-        setStatus("Unhealthy");
-      } else if (IaqData >= 800) {
-        setStatus("Very Unhealthy");
-      }
-   
-      
-    };     
-
-    fetchData();
-
-    const interval = setInterval(fetchData, 15000);
-    return () => clearInterval(interval);
-  });
+  const { IaqData, temperature, humidity, status } = useContext(IaqContext);
 
 
    const statusClass = classNames({

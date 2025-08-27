@@ -12,7 +12,7 @@ export default function AdminLogin() {
     e.preventDefault();
     // Add your login logic here
     if(username === "admin" && password === "admin123"){
-      navigate("/dashboard");
+      navigate("/admin_dashboard");
     }
     console.log("Login attempt:", { username, password, rememberMe });
   };

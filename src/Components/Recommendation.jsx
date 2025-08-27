@@ -4,7 +4,7 @@ import styles from "./Recommendation.module.css";
 const Recommendation = () => {
   const recommendations = [
     {
-      range: "0-50",
+      range: "0-100",
       category: "Good",
       generalPublic: "Safe",
       sensitiveGroup: "Safe",
@@ -13,7 +13,7 @@ const Recommendation = () => {
       color: "#31b121ff",
     },
     {
-      range: "51-100",
+      range: "100-300",
       category: "Moderate",
       generalPublic: "Safe",
       sensitiveGroup: "Consider reducing prolonged outdoor exertion",
@@ -22,7 +22,7 @@ const Recommendation = () => {
       color: "#ffff5dff",
     },
     {
-      range: "101-150",
+      range: "300-600",
       category: "Unhealthy for Sensitive Groups",
       generalPublic: "Generally safe",
       sensitiveGroup: "Limit prolonged or heavy outdoor exertion",
@@ -31,7 +31,7 @@ const Recommendation = () => {
       color: "#ffc14dff",
     },
     {
-      range: "151-200",
+      range: "600-1000",
       category: "Unhealthy",
       generalPublic: "Avoid prolonged outdoors",
       sensitiveGroup: "Avoid outdoor activity",
@@ -40,7 +40,7 @@ const Recommendation = () => {
       color: "#f17762ff",
     },
     {
-      range: "201-300",
+      range: "1000-3000",
       category: "Very Unhealthy",
       generalPublic: "Avoid outdoor activity",
       sensitiveGroup: "Stay indoors, close windows",
@@ -49,7 +49,7 @@ const Recommendation = () => {
       color: "#ce3636ff",
     },
     {
-      range: "301-500",
+      range: "> 3000",
       category: "Hazardous",
       generalPublic: "Emergency level - health risks for everyone",
       sensitiveGroup: "Stay indoors with sealed windows",
@@ -61,12 +61,12 @@ const Recommendation = () => {
 
   return (
     <div className={styles.recommendationContainer}>
-      <h1 className={styles.title}>Health Recommendation by IQI Level</h1>
+      <h1 className={styles.title}>Health Recommendation by PPM Level</h1>
       <div className={styles.tableContainer}>
         <table className={styles.recommendationTable}>
           <thead>
             <tr>
-              <th>IQI Range</th>
+              <th>IAQ Range</th>
               <th>Category</th>
               <th>General Public</th>
               <th>Sensitive Group</th>
@@ -90,6 +90,18 @@ const Recommendation = () => {
       </div>
 
       <div className={styles.additionalInfo}>
+
+         <div className={styles.infoSection}>
+          <h3>What is Part Per Million (PPM)?</h3>
+          <p>
+            PPM stands for "parts per million" and is a unit of measurement used to describe the concentration of a substance in air. In the context of air quality, it indicates the level of pollutants present.
+          </p>
+          <p>Example : If a gas sensor detects 5 ppm of carbon monoxide, it means there are 5 CO molecules for every 1,000,000 air molecules. </p>
+        </div>
+        
+        <hr />
+        <br />
+
         <div className={styles.infoSection}>
           <h3>Sensitive Groups:</h3>
           <p>

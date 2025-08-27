@@ -10,11 +10,15 @@ import Contact from "./Pages/ContactUs";
 import Recommendation from "./Components/Recommendation";
 import Navbar from "./Components/Navbar";
 import Sensor from "./Pages/Sensor";
+import AdminDashboard from "./Pages/AdminDashboard";
+import { IaqProvider } from "./Pages/IaqContext";
 
 
 function App() {
   return (
+
     <BrowserRouter>
+      <IaqProvider>
       <Routes>
         {/* Admin login route without footer */}
         <Route
@@ -27,17 +31,18 @@ function App() {
           }
         />
         
-
         {/* All other routes with Layout (includes footer) */}
         <Route path="/" element={<Layout />}>
           <Route index element={<Home hello="hello"/>} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
-           <Route path="sensor" element={<Sensor />} />
+          <Route path="sensor" element={<Sensor />} />
           <Route path="recommendation" element={<Recommendation />} />
+          <Route path="admin_dashboard" element={<AdminDashboard />} />
         </Route>
       </Routes>
+     </IaqProvider>
     </BrowserRouter>
   );
 }

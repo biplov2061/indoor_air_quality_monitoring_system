@@ -54,7 +54,7 @@ function ContactPage() {
   };
 
   //function to handle the form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     setisSubmitted(true);
@@ -62,8 +62,17 @@ function ContactPage() {
     setErrors(validatationErrors);
 
     if (Object.keys(validatationErrors).length === 0) {
+
+     await fetch('http://localhost:8080/iqa/feedback', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
       //submit the form
-      alert("Form submitted successfully !");
+      alert("Thankyou for your feedback!");
       setFormData({
         name: "",
         phone: "",

@@ -1,0 +1,126 @@
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  background-color: #1e293b; /* dark blue/gray */
+  color: white;
+  height: 100vh;
+  transition: width 0.3s ease-in-out;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+.sidebar.open {
+  width: 250px;   /* visible width */
+}
+
+.sidebar.closed {
+  width: 0;       /* hidden completely */
+  padding: 0;     /* remove inner space when closed */
+}
+
+.close_btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.sidebar_title {
+  font-size: 20px;
+  margin-top: 40px; /* so title doesn’t overlap close button */
+  margin-bottom: 20px;
+}
+
+.sidebar_menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar_menu li {
+  margin: 15px 0;
+  margin-bottom: 10px;
+}
+
+.sidebar_menu a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.sidebar_menu a:hover {
+  color: #38bdf8; /* light blue on hover */
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.burger_btn {
+  background: #1e293b;
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.adminProfile{
+    height: fit-content;
+    width: fit-content;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profilePicture{
+     height: 65px;
+     width: 65px;
+     border-radius: 50%;
+     overflow: hidden;
+     background-color: white;
+     margin-top: 15px;
+     margin-left: 45px;
+     margin-bottom: 15px;
+}
+
+.logout_btn{
+    height: 30px;
+    width: 100px;
+    border-radius:8px; 
+    border: #1e293b; 
+    margin-top: 30px; 
+}
+
+.logout_btn:hover{
+    background-color: rgb(255, 0, 0);
+    color: white;
+    border: 1px solid red;
+    cursor: pointer;
+}
+
+.welcomeAdmin{
+    text-align: center;
+    font-size: small;
+    margin-left: 30px;
+}
+
+.adminImage{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
