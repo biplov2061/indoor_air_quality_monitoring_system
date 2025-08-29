@@ -7,10 +7,9 @@ export default function AdminDashboard() {
   const [isOpen, setIsOpen] = React.useState(true);
   const navigate = useNavigate();
 
-
-  const handleLogout = () => {  
-      alert("Logged out successfully");
-      navigate('/');
+  const handleLogout = () => {
+    alert("Logged out successfully");
+    navigate("/");
   };
 
   return (
@@ -23,28 +22,36 @@ export default function AdminDashboard() {
         </button>
 
         <div className={style.adminProfile}>
-            <div className={style.profilePicture}>
-                  <img src={admin} alt="Admin Profile" className={style.adminImage} />
-            </div>
-            <p className={style.welcomeAdmin}>Welcome, Biplov</p>
+          <div className={style.profilePicture}>
+            <img src={admin} alt="Admin Profile" className={style.adminImage} />
+          </div>
+          <p className={style.welcomeAdmin}>Welcome, Biplov</p>
         </div>
         <br />
         <hr />
         <ul className={style.sidebar_menu}>
-          <li><a href="#dashboard">Dashboard</a></li>
-          <li><a href="#sensors">Sensors</a></li>
-          <li><a href="#feedback">Feedback</a></li>
-          <li><a href="#settings">Settings</a></li>
-          <li><button className={style.logout_btn} onClick={handleLogout}>Logout </button></li>
+          <li>
+            <a href="#feedback">Feedback</a>
+          </li>
+          <li>
+            <a href="#settings">Settings</a>
+          </li>
+          <li>
+            <button className={style.logout_btn} onClick={handleLogout}>
+              Logout{" "}
+            </button>
+          </li>
         </ul>
       </div>
 
       {/* Main Content */}
       <div className={style.content}>
         {/* Burger Button */}
-       {(!isOpen)&&  <button className={style.burger_btn} onClick={() => setIsOpen(true)}>
-          ☰
-        </button>}
+        {!isOpen && (
+          <button className={style.burger_btn} onClick={() => setIsOpen(true)}>
+            ☰
+          </button>
+        )}
 
         <h1>Welcome, Admin</h1>
         <p>
