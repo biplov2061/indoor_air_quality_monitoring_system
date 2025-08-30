@@ -5,7 +5,13 @@ import { IaqContext } from "../Pages/IaqContext";
 
 const IAQIndicator = () => {
   const { IaqData } = useContext(IaqContext);
-  const percent = (IaqData / 1000) * 100;
+  var percent = 0;
+  
+  if(IaqData < 1000){
+     percent = (IaqData / 1000) * 100;
+  }else{
+    percent = 100;
+  }
 
 
 

@@ -9,6 +9,8 @@ export default function AdminDashboard() {
 
 
   const handleLogout = () => {  
+
+    localStorage.removeItem("token");
       alert("Logged out successfully");
       navigate('/');
   };

@@ -8,13 +8,42 @@ export default function AdminLogin() {
   const [rememberMe, setRememberMe] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     // Add your login logic here
-    if(username === "admin" && password === "admin123"){
-      navigate("/admin_dashboard");
-    }
-    console.log("Login attempt:", { username, password, rememberMe });
+
+    try{
+        const response = await fetch("http://localhost:8080/api/auth/login", {
+           method: "POST",
+           headers:{
+             "Content-Type": "application/json"
+           },
+           body: JSON.stringify({username , password}),
+        });
+
+        if(response.ok){
+           const data = await response.json();
+           console.log("login successful!" , data);
+
+           navigate("/admin/dashboard");
+
+           localStorage.setItem("token" , data.token);
+           localStorage.setItem("role" , "ADMIN");
+
+           
+        }else{
+             const errorData = await response.json();
+            //  setMessage(errorData.message || "Login failed");
+            alert("Invalid username or password!");
+            setPassword("");
+            setUsername("");
+        }
+
+      }catch(error){
+        console.error("Error during login:" , error);
+        // setMessage("Login failed");
+      }
+
   };
 
   return (
