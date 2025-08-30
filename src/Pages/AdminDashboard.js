@@ -7,20 +7,16 @@ export default function AdminDashboard() {
   const [isOpen, setIsOpen] = React.useState(true);
   const navigate = useNavigate();
 
-<<<<<<< HEAD
+
 
   const handleLogout = () => {  
 
     localStorage.removeItem("token");
       alert("Logged out successfully");
       navigate('/');
-=======
-  const handleLogout = () => {
-    alert("Logged out successfully");
-    navigate("/");
->>>>>>> 5ee278cdc0ec0f0421d8d41b9b495cfbd3b7add1
-  };
 
+  }
+  
   // Sample feedbacks data
   const feedbacks = [
     {
@@ -87,13 +83,13 @@ export default function AdminDashboard() {
         <br />
         <hr />
         <ul className={style.sidebar_menu}>
-          <li>
-            <a href="#feedback">Feedback</a>
-          </li>
-
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#sensors">Sensors</a></li>
+          <li><a href="#feedback">Feedback</a></li>
+          <li><a href="#settings">Settings</a></li>
           <li>
             <button className={style.logout_btn} onClick={handleLogout}>
-              Logout{" "}
+              Logout 
             </button>
           </li>
         </ul>
@@ -102,7 +98,7 @@ export default function AdminDashboard() {
       {/* Main Content */}
       <div className={style.content}>
         {/* Burger Button */}
-        {!isOpen && (
+        {(!isOpen) && (
           <button className={style.burger_btn} onClick={() => setIsOpen(true)}>
             ☰
           </button>
@@ -113,7 +109,7 @@ export default function AdminDashboard() {
           Welcome to the admin dashboard. Here you can manage the application
           settings and user accounts.
         </p>
-
+        
         {/* Feedback Section */}
         <div id="feedback" className={style.feedbackSection}>
           <h2>User Feedbacks</h2>
@@ -131,6 +127,7 @@ export default function AdminDashboard() {
             ))}
           </div>
         </div>
+
       </div>
     </div>
   );
