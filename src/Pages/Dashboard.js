@@ -37,7 +37,6 @@ export default function Dashboard() {
     { label: "MQ135", value: 50, status: "good" },
     { label: "ESP32", value: "105°C", status: "good" },
     { label: "Smoke", value: "350 ppm", status: "good", hasCurrentLabel: true },
-    { label: "CO2", sub: "Carbon dioxide", value: "270 ppm", status: "good" },
   ];
 
   const weatherData = [

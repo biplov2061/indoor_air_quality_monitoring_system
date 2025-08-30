@@ -14,12 +14,11 @@ import AdminDashboard from "./Pages/AdminDashboard";
 import { IaqProvider } from "./Pages/IaqContext";
 import PrivateRoute from "./Components/PrivateRoute";
 
-
 function App() {
   return (
-
     <BrowserRouter>
       <IaqProvider>
+<<<<<<< HEAD
       <Routes>
         {/* Admin login route without footer */}
         <Route
@@ -51,6 +50,31 @@ function App() {
         </Route>
       </Routes>
      </IaqProvider>
+=======
+        <Routes>
+          <Route
+            path="/admin"
+            element={
+              <div>
+                <Navbar />
+                <AdminLogin />
+              </div>
+            }
+          />
+
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home hello="hello" />} />
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="sensor" element={<Sensor />} />
+            <Route path="recommendation" element={<Recommendation />} />
+          </Route>
+
+          <Route path="/admin_dashboard" element={<AdminDashboard />} />
+        </Routes>
+      </IaqProvider>
+>>>>>>> 5ee278cdc0ec0f0421d8d41b9b495cfbd3b7add1
     </BrowserRouter>
   );
 }
