@@ -5,6 +5,7 @@ import admin from "../Assets/admin.png";
 
 export default function AdminDashboard() {
   const [isOpen, setIsOpen] = React.useState(true);
+  const [feedback, setFeedback] = React.useState([]);
   const navigate = useNavigate();
 
 
@@ -16,54 +17,22 @@ export default function AdminDashboard() {
       navigate('/');
 
   }
+
+  const handleFeedback = async() =>{
+
+    //fetching feedback
+    try{
+         const response = await fetch("http://localhost:8080/iqa/feedback/latest")
+         const data = await response.json();
+         console.log("Latest feedback:", data);
+         setFeedback([...feedback , data]);
+         // Get the latest 6 feedback entries
+    }catch(error){
+      console.error("Error fetching feedback:", error);
+    }
+    
+  }
   
-  // Sample feedbacks data
-  const feedbacks = [
-    {
-      id: 1,
-      name: "John Doe",
-      email: "john.doe@example.com",
-      message:
-        "Great app! The air quality monitoring is very accurate and helpful.",
-      date: "2025-08-25",
-    },
-    {
-      id: 2,
-      name: "Jane Smith",
-      email: "jane.smith@example.com",
-      message:
-        "I love the real-time updates. Very helpful for my home environment.",
-      date: "2025-08-24",
-    },
-    {
-      id: 3,
-      name: "Mike Johnson",
-      email: "mike.johnson@example.com",
-      message: "Could use more detailed reports, but overall good application.",
-      date: "2025-08-23",
-    },
-    {
-      id: 4,
-      name: "Sarah Wilson",
-      email: "sarah.wilson@example.com",
-      message: "Excellent design and user interface! Very intuitive to use.",
-      date: "2025-08-22",
-    },
-    {
-      id: 5,
-      name: "Tom Brown",
-      email: "tom.brown@example.com",
-      message: "The notifications are timely and useful for staying informed.",
-      date: "2025-08-21",
-    },
-    {
-      id: 6,
-      name: "Lisa Davis",
-      email: "lisa.davis@example.com",
-      message: "Perfect for monitoring indoor air quality in my office space.",
-      date: "2025-08-20",
-    },
-  ];
 
   return (
     <div className={style.container}>
@@ -83,10 +52,13 @@ export default function AdminDashboard() {
         <br />
         <hr />
         <ul className={style.sidebar_menu}>
-          <li><a href="#dashboard">Dashboard</a></li>
-          <li><a href="#sensors">Sensors</a></li>
-          <li><a href="#feedback">Feedback</a></li>
-          <li><a href="#settings">Settings</a></li>
+          {/* <li><a href="#sensors">Sensors</a></li>
+          <li><a href="#feedback">Feedback</a></li> */}
+          <li>
+            <button className={style.feedback_btn} onClick={handleFeedback}>
+              View Feedback
+            </button>
+          </li>
           <li>
             <button className={style.logout_btn} onClick={handleLogout}>
               Logout 
@@ -107,14 +79,14 @@ export default function AdminDashboard() {
         <h1>Welcome, Admin</h1>
         <p>
           Welcome to the admin dashboard. Here you can manage the application
-          settings and user accounts.
+          settings and view user feedback.
         </p>
         
         {/* Feedback Section */}
         <div id="feedback" className={style.feedbackSection}>
           <h2>User Feedbacks</h2>
           <div className={style.feedbacksContainer}>
-            {feedbacks.map((feedback) => (
+            {feedback.map((feedback) => (
               <div key={feedback.id} className={style.feedbackRow}>
                 <div className={style.feedbackInfo}>
                   <span className={style.feedbackId}>#{feedback.id}</span>

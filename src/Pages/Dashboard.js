@@ -1,5 +1,4 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import styles from "./Dashboard.module.css";
 import upArrow from "../Assets/up-arrow.png";
 import mask from "../Assets/icon-mask.png";
@@ -11,6 +10,7 @@ import PollutionChart from "../Components/PollutionChart";
 import IAQIndicator from "../Components/IAQIndicator";
 import { useContext } from "react";
 import { IaqContext } from "./IaqContext";
+import { useNavigate } from "react-router-dom";
 
 function generateCurrentDateTime() {
   const now = new Date();
@@ -34,32 +34,34 @@ export default function Dashboard() {
   const { IaqData, temperature, humidity, status } = useContext(IaqContext);
 
   const airQualityData = [
-    { label: "MQ135", value: 50, status: "good" },
-    { label: "ESP32", value: "105°C", status: "good" },
-    { label: "Smoke", value: "350 ppm", status: "good", hasCurrentLabel: true },
+    { label: "MQ135", value: "Gas sensor", status:"Running"},
+    { label: "ESP32", value: "Micro controller", status:"Running"},
+    { label: "DHT11", value: "Temperature-Humidity sensor", status:"Running"},
   ];
 
   const weatherData = [
     {
       icon: "🌡",
       label: "Temprature",
-      value: "28.1°C",
+      value: `${temperature}°C`,
       hasCurrentLabel: true,
       extraIcon: "☁️",
     },
     {
       icon: "💧",
       label: "Humidity",
-      value: "64 %",
+      value: `${humidity}%`,
       hasCurrentLabel: true,
     },
     {
       icon: "❗",
-      label: "Feels like",
-      value: "29.4°C",
-      sub: "Apparent Temperature",
+      label: "IAQ",
+      value: `${IaqData} PPM`,
+      sub: "Current Pollutants level",
     },
   ];
+
+
 
   return (
     <div className={styles.container}>
@@ -187,7 +189,7 @@ export default function Dashboard() {
           Current <span className={styles.highlight}>Pollutant</span> Levels
         </h2>
         <p className={styles.sectionSubtitle}>
-          It shows the level of major pollutants present in air
+          It shows the sensors current status and readings.
         </p>
 
         <h3 className={styles.indicatorTitle}>Air Quality Indicators</h3>

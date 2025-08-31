@@ -98,6 +98,22 @@
   margin-bottom: 15px;
 }
 
+
+.feedback_btn{
+  height: 30px;
+  width: 100px;
+  border-radius: 8px;
+  border: #1e293b;
+  margin-top: 30px;
+}
+
+.feedback_btn:hover {
+  background-color: rgb(14, 165, 233);
+  color: white;
+  border: 1px solid rgb(14, 165, 233);
+  cursor: pointer;
+}
+
 .logout_btn {
   height: 30px;
   width: 100px;

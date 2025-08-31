@@ -287,12 +287,12 @@ h5 {
 .sectionTitle {
   font-size: 28px;
   font-weight: 600;
-  margin: 0 0 0 30px;
+  /* margin: 0 0 0 30px; */
 }
 
-.sectionSubtitle {
+/* .sectionSubtitle {
   margin: 0 0 0 30px;
-}
+} */
 
 .indicatorTitle {
   font-size: 20px;

@@ -7,7 +7,7 @@ const IAQIndicator = () => {
   const { IaqData } = useContext(IaqContext);
   var percent = 0;
   
-  if(IaqData < 1000){
+  if(IaqData <= 1000){
      percent = (IaqData / 1000) * 100;
   }else{
     percent = 100;

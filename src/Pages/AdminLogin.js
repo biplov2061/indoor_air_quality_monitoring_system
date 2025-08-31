@@ -35,6 +35,7 @@ export default function AdminLogin() {
              const errorData = await response.json();
             //  setMessage(errorData.message || "Login failed");
             alert("Invalid username or password!");
+            console.log("Login failed" , errorData.message);
             setPassword("");
             setUsername("");
         }
@@ -97,9 +98,9 @@ export default function AdminLogin() {
                 />
                 <label>Remember me</label>
               </div>
-              <a href="#" className={styles.forgotPassword}>
+              {/* <a href="#" className={styles.forgotPassword}>
                 Forgot password?
-              </a>
+              </a> */}
             </div>
 
             <button type="submit" className={styles.loginButton}>
