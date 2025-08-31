@@ -80,6 +80,14 @@ function Navbar() {
             Sensor
           </NavLink>
         </li>
+
+        <li>
+            <NavLink to="/health" className={({ isActive }) =>
+              isActive ? styles.active_link : styles.inactive_link
+            }>
+              Health Recommendation
+            </NavLink>
+        </li>
       </ul>
     </nav>
   );

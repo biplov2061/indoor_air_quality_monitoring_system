@@ -13,6 +13,7 @@ import Sensor from "./Pages/Sensor";
 import AdminDashboard from "./Pages/AdminDashboard";
 import { IaqProvider } from "./Pages/IaqContext";
 import PrivateRoute from "./Components/PrivateRoute";
+import HealthForm from "./Pages/HealthForm";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="sensor" element={<Sensor />} />
           <Route path="recommendation" element={<Recommendation />} />
+          <Route path="health" element={<HealthForm />} />
           <Route path="admin/dashboard" 
           element={
             <PrivateRoute>
