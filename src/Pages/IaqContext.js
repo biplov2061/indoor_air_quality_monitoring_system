@@ -7,6 +7,7 @@ export const IaqProvider = ({ children }) => {
   const [temperature, setTemperature] = useState("Loading...");
   const [humidity, setHumidity] = useState("Loading...");
   const [status, setStatus] = useState("Loading...");
+  const [sensorStatus, setSensorStatus] = useState("Active");
 
   useEffect(() => {
     const fetchData = () => {
@@ -42,7 +43,7 @@ export const IaqProvider = ({ children }) => {
   }, []);
 
   return (
-    <IaqContext.Provider value={{ IaqData, temperature, humidity, status }}>
+    <IaqContext.Provider value={{ IaqData, temperature, humidity, status , sensorStatus}}>
       {children}
     </IaqContext.Provider>
   );

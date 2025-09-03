@@ -66,7 +66,7 @@ const Recommendation = () => {
         <table className={styles.recommendationTable}>
           <thead>
             <tr>
-              <th>IAQ Range</th>
+              <th>IAQ Range (in PPM)</th>
               <th>Category</th>
               <th>General Public</th>
               <th>Sensitive Group</th>

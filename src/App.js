@@ -14,45 +14,62 @@ import AdminDashboard from "./Pages/AdminDashboard";
 import { IaqProvider } from "./Pages/IaqContext";
 import PrivateRoute from "./Components/PrivateRoute";
 import HealthForm from "./Pages/HealthForm";
+import SensorsConfig from "./Pages/SensorsConfig";
+import AdminLayout from "./Pages/AdminLayout";
+import FeedbackPage from "./Pages/FeedbackPage";
+import SensorContextProvider from "./Pages/SensorContext";
 
 function App() {
   return (
     <BrowserRouter>
       <IaqProvider>
+        {" "}
+        {/* provides air quality context in entire app */}
+        <SensorContextProvider>
+          {" "}
+          {/* provides sensor context in entire app */}
+          <Routes>
+            {/* Admin login route without footer */}
+            <Route
+              path="/admin-login"
+              element={
+                <div>
+                  <Navbar />
+                  <AdminLogin />
+                </div>
+              }
+            />
 
-      <Routes>
-        {/* Admin login route without footer */}
-        <Route
-          path="/admin"
-          element={
-            <div>
-              <Navbar />
-              <AdminLogin />
-            </div>
-          }
-        />
-        
-        {/* All other routes with Layout (includes footer) */}
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home hello="hello"/>} />
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="sensor" element={<Sensor />} />
-          <Route path="recommendation" element={<Recommendation />} />
-          <Route path="health" element={<HealthForm />} />
-          <Route path="admin/dashboard" 
-          element={
-            <PrivateRoute>
-              <AdminDashboard />
-            </PrivateRoute>
-             } 
-          />
-          
-        </Route>
-      </Routes>
+            {/* Main layout */}
+
+            {/* All other routes with Layout (includes footer) */}
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home hello="hello" />} />
+              <Route path="dashboard" element={<Dashboard />} />
+              <Route path="about" element={<About />} />
+              <Route path="contact" element={<Contact />} />
+              <Route path="sensor" element={<Sensor />} />
+              <Route path="recommendation" element={<Recommendation />} />
+              <Route path="health" element={<HealthForm />} />
+
+              {/* Admin routes protected by PrivateRoute */}
+              <Route
+                path="/admin"
+                element={
+                  <PrivateRoute>
+                    <AdminLayout />
+                  </PrivateRoute>
+                }
+              >
+                <Route path="dashboard" element={<AdminDashboard />} />
+                <Route path="sensorsConfig" element={<SensorsConfig />} />
+                <Route path="feedback" element={<FeedbackPage />} />
+              </Route>
+            </Route>
+          </Routes>
+          {/* Admin layout without footer */}
+        </SensorContextProvider>
       </IaqProvider>
-    
     </BrowserRouter>
   );
 }

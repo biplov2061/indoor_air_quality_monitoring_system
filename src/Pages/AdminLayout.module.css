@@ -1,0 +1,229 @@
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: auto;
+}
+
+.sidebar {
+  background-color: #1e293b; /* dark blue/gray */
+  color: white;
+  height: 100vh;
+  transition: width 0.3s ease-in-out;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+.sidebar.open {
+  width: 250px; /* visible width */
+}
+
+.sidebar.closed {
+  width: 0; /* hidden completely */
+  padding: 0; /* remove inner space when closed */
+}
+
+.close_btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.sidebar_title {
+  font-size: 20px;
+  margin-top: 40px; /* so title doesn’t overlap close button */
+  margin-bottom: 20px;
+}
+
+.sidebar_menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar_menu li {
+  margin: 15px 0;
+  margin-bottom: 10px;
+}
+
+.sidebar_menu a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.sidebar_menu a:hover {
+  color: #38bdf8; /* light blue on hover */
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+.burger_btn {
+  background: #1e293b;
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.adminProfile {
+  height: fit-content;
+  width: fit-content;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profilePicture {
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: white;
+  margin-top: 15px;
+  margin-left: 45px;
+  margin-bottom: 15px;
+}
+
+.sensors_btn{
+  height: 30px;
+  width: 100px;
+  border-radius: 8px;
+  border: #1e293b;
+  margin-top: 30px;
+}
+
+.sensors_btn:hover {
+  background-color: rgb(34, 197, 94);
+  color: white;
+  border: 1px solid rgb(34, 197, 94);
+  cursor: pointer;
+}
+
+.feedback_btn{
+  height: 30px;
+  width: 100px;
+  border-radius: 8px;
+  border: #1e293b;
+  margin-top: 30px;
+}
+
+.feedback_btn:hover {
+  background-color: rgb(14, 165, 233);
+  color: white;
+  border: 1px solid rgb(14, 165, 233);
+  cursor: pointer;
+}
+
+.logout_btn {
+  height: 30px;
+  width: 100px;
+  border-radius: 8px;
+  border: #1e293b;
+  margin-top: 30px;
+}
+
+.logout_btn:hover {
+  background-color: rgb(255, 0, 0);
+  color: white;
+  border: 1px solid red;
+  cursor: pointer;
+}
+
+.welcomeAdmin {
+  text-align: center;
+  font-size: small;
+  margin-left: 30px;
+}
+
+.adminImage {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.feedbackSection {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feedbackSection h2 {
+  color: #1e293b;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.feedbacksContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feedbackRow {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.feedbackInfo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.feedbackId {
+  background-color: #1e293b;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.feedbackName {
+  font-weight: bold;
+  color: #1e293b;
+  font-size: 14px;
+}
+
+.feedbackEmail {
+  color: #718096;
+  font-size: 14px;
+}
+
+.feedbackMessage {
+  color: #4a5568;
+  line-height: 1.5;
+  font-size: 14px;
+  margin: 8px 0;
+  font-style: italic;
+}
+
+.feedbackDate {
+  color: #718096;
+  font-size: 12px;
+  align-self: flex-end;
+}

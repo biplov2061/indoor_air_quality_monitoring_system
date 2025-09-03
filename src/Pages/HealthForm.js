@@ -104,6 +104,7 @@ export default function HealthForm() {
   return (
     <div className={styles.container}>
       <div className={styles.card}>
+        <h2 className={styles.upperTitle}>Personal</h2>
         <h2 className={styles.title}>Health Recommendation Form</h2>
         <form onSubmit={handleSubmit} className={styles.form}>
           <input

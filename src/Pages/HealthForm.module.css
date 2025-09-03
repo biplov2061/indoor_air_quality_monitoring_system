@@ -20,6 +20,13 @@
   animation: fadeIn 0.8s ease;
 }
 
+.upperTitle{
+  margin: 5px;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+}
+
 .title {
   font-size: 1.8rem;
   font-weight: 700;

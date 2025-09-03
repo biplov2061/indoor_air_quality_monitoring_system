@@ -11,6 +11,7 @@ import IAQIndicator from "../Components/IAQIndicator";
 import { useContext } from "react";
 import { IaqContext } from "./IaqContext";
 import { useNavigate } from "react-router-dom";
+import { SensorContext } from "./SensorContext";
 
 function generateCurrentDateTime() {
   const now = new Date();
@@ -31,37 +32,8 @@ function generateCurrentDateTime() {
 
 export default function Dashboard() {
   const navigate = useNavigate();
-  const { IaqData, temperature, humidity, status } = useContext(IaqContext);
-
-  const airQualityData = [
-    { label: "MQ135", value: "Gas sensor", status:"Running"},
-    { label: "ESP32", value: "Micro controller", status:"Running"},
-    { label: "DHT11", value: "Temperature-Humidity sensor", status:"Running"},
-  ];
-
-  const weatherData = [
-    {
-      icon: "🌡",
-      label: "Temprature",
-      value: `${temperature}°C`,
-      hasCurrentLabel: true,
-      extraIcon: "☁️",
-    },
-    {
-      icon: "💧",
-      label: "Humidity",
-      value: `${humidity}%`,
-      hasCurrentLabel: true,
-    },
-    {
-      icon: "❗",
-      label: "IAQ",
-      value: `${IaqData} PPM`,
-      sub: "Current Pollutants level",
-    },
-  ];
-
-
+  const { IaqData, temperature, humidity, status } = useContext(IaqContext); //iaq data context
+  const { sensors } = useContext(SensorContext); //sensor context
 
   return (
     <div className={styles.container}>
@@ -194,53 +166,16 @@ export default function Dashboard() {
 
         <h3 className={styles.indicatorTitle}>Air Quality Indicators</h3>
 
-        <div className={styles.pollutantGrid}>
-          {airQualityData.map((item, i) => (
-            <div key={i} className={styles.pollutantCard}>
-              <div className={styles.pollutantHeader}>
-                {item.label === "Smoke" && (
-                  <span className={styles.smokeIcon}>🚬</span>
-                )}
-                <span className={styles.pollutantName}>{item.label}</span>
-                <span className={styles.statusBadge}>{item.status}</span>
-              </div>
-
-              <div className={styles.currentLabel}>
-                {item.hasCurrentLabel ? "Current" : !item.sub ? "\u00A0" : ""}
-              </div>
-
-              {item.sub && (
-                <div className={styles.pollutantSub}>{item.sub}</div>
-              )}
-
-              <div className={styles.pollutantValue}>{item.value}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className={styles.weatherSection}>
-        <h2 className={styles.indicatorTitle}>Weather indicators</h2>
-        <div className={styles.weatherGrid}>
-          {weatherData.map((item, i) => (
-            <div key={i} className={styles.weatherCard}>
-              <div className={styles.weatherHeader}>
-                <span className={styles.weatherIcon}>{item.icon}</span>
-                <span className={styles.weatherName}>{item.label}</span>
-              </div>
-
-              {item.hasCurrentLabel && (
-                <div className={styles.currentLabel}>Current</div>
-              )}
-
-              {item.sub && <div className={styles.weatherSub}>{item.sub}</div>}
-
-              <div className={styles.weatherValue}>
-                {item.extraIcon && (
-                  <span className={styles.extraIcon}>{item.extraIcon}</span>
-                )}
-                {item.value}
-              </div>
+        <div className={styles.sensor}>
+          {sensors.map((sensor) => (
+            <div key={sensor.id} className={styles.sensorRow}>
+              <h3>{sensor.name}</h3>
+              <p className={styles.type}>{`Type: ${sensor.type}`}</p>
+              <button
+                className={sensor.active ? styles.active : styles.inactive}
+              >
+                {sensor.active ? "Active" : "Inactive"}
+              </button>
             </div>
           ))}
         </div>

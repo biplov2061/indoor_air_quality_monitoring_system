@@ -297,7 +297,8 @@ h5 {
 .indicatorTitle {
   font-size: 20px;
   font-weight: 600;
-  margin: 16px 0;
+  margin-top: 35px;
+  margin-bottom: 5px;
 }
 
 .pollutantGrid {
@@ -359,58 +360,65 @@ h5 {
   text-align: center;
 }
 
-.weatherSection {
-  margin: 80px auto 0 auto;
-  max-width: 1200px;
+
+.sensorStatus{
+    margin-top: 45px;
+    margin-left: 20px;
 }
 
-.weatherGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-.weatherCard {
-  border: 1px solid black;
-  border-radius: 8px;
-  padding: 16px;
-  background-color: #fff;
-}
-
-.weatherHeader {
+.sensor{
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
+  justify-content: space-between;
+  padding-top: 1rem;
+  font-family: sans-serif;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  gap: 10px;
 }
 
-.weatherIcon {
-  margin-right: 8px;
-  font-size: 20px;
+
+.sensorRow>h3{
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.weatherName {
-  font-weight: 600;
-  font-size: 18px;
+.sensorRow>p{
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 12px;
 }
 
-.weatherSub {
-  font-weight: 600;
-  font-size: 14px;
-  font-style: italic;
-  margin-bottom: 8px;
-  text-align: center;
+.sensorRow {
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    padding: 10px;
+    width:380px;
+    height: max-content;
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 252, 252);
 }
-
-.weatherValue {
-  font-size: 24px;
-  font-weight: 500;
+/* 
+button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
   margin-top: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+} */
+
+.active {
+  background-color: #4caf50;
+  color: white;
 }
 
-.extraIcon {
-  margin-right: 8px;
-  font-size: 20px;
+.inactive {
+  background-color: #f44336;
+  color: white;
 }
+
