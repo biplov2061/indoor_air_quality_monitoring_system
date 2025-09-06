@@ -53,7 +53,7 @@ export default function HealthForm() {
     if(validation()){
 
         try{
-            const response = await fetch(`http://localhost:8080/iqa/health/recommend?condition=${condition}`, {
+            const response = await fetch(`http://localhost:8080/iaq/health/recommend?condition=${condition}`, {
                 method: "GET",
             });
 

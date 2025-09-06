@@ -62,7 +62,7 @@ function Home() {
                 className={styles.temperatureIcon}
               />
               <p className={styles.feelsLike}>Feels Like :</p>
-              <p className={styles.temperatureValue}>{(temperature * 12).toFixed(1)}°C</p>
+              <p className={styles.temperatureValue}>{(temperature)}°C</p>
             </div>
 
             <div className={styles.Humidity_logo_text}>

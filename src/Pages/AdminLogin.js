@@ -5,7 +5,7 @@ import styles from "./AdminLogin.module.css";
 export default function AdminLogin() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [rememberMe, setRememberMe] = useState(false);
+  // const [rememberMe, setRememberMe] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = async(e) => {
@@ -88,7 +88,7 @@ export default function AdminLogin() {
               />
             </div>
 
-            <div className={styles.options}>
+            {/* <div className={styles.options}>
               <div className={styles.rememberMe}>
                 <input
                   type="checkbox"
@@ -100,8 +100,8 @@ export default function AdminLogin() {
               </div>
               {/* <a href="#" className={styles.forgotPassword}>
                 Forgot password?
-              </a> */}
-            </div>
+              </a> 
+            </div> */}
 
             <button type="submit" className={styles.loginButton}>
               Login

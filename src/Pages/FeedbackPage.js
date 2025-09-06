@@ -7,7 +7,7 @@ export default function FeedbackPage() {
   const handleFeedback = async () => {
     //fetching feedback
     try {
-      const response = await fetch("http://localhost:8080/iqa/feedback/latest");
+      const response = await fetch("http://localhost:8080/iaq/feedback/latest");
       const data = await response.json();
       console.log("Latest feedback:", data);
       setFeedback([...feedback, data]);
@@ -35,7 +35,7 @@ export default function FeedbackPage() {
                 <span className={style.feedbackEmail}>{feedback.email}</span>
               </div>
               <div className={style.feedbackMessage}>{feedback.message}</div>
-              <div className={style.feedbackDate}>{feedback.date}</div>
+              <div className={style.feedbackDate}>{feedback.feedbackTime}</div>
             </div>
           ))}
         </div>

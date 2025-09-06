@@ -63,7 +63,7 @@ function ContactPage() {
 
     if (Object.keys(validatationErrors).length === 0) {
 
-     await fetch('http://localhost:8080/iqa/feedback', {
+     await fetch('http://localhost:8080/iaq/feedback', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

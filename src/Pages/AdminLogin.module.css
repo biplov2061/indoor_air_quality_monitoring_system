@@ -100,7 +100,7 @@
   margin-bottom: 30px;
 }
 
-.rememberMe {
+/* .rememberMe {
   display: flex;
   align-items: center;
   
@@ -116,7 +116,7 @@
 .rememberMe label {
   color: #666;
   font-size: 0.9rem;
-}
+} */
 
 .forgotPassword {
   color: #0052cc;
@@ -138,6 +138,7 @@
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.2s;
+  margin-top: 45px;
 }
 
 .loginButton:hover {
