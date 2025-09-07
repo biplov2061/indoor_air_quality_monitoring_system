@@ -44,6 +44,8 @@ useEffect(() => {
         const hum = data.main.humidity;
         setTemperature(tempC.toFixed(2));
         setHumidity(hum);
+        console.log("Temperature:", tempC.toFixed(2), "°C");
+        console.log("Humidity:", hum, "%");
       })
       .catch(err => {
         console.error("Error fetching temperature and humidity data:", err);
@@ -67,7 +69,7 @@ useEffect(() => {
 }, []);
 
   return (
-    <IaqContext.Provider value={{ IaqData, temperature, humidity, status }}>
+    <IaqContext.Provider value={{ IaqData, temperature, humidity, status}}>
       {children}
     </IaqContext.Provider>
   );

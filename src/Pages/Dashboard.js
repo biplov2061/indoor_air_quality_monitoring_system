@@ -49,17 +49,19 @@ export default function Dashboard() {
           </h2>
           <span className={styles.iaq}>IAQ : {IaqData}</span>
 
-          <h3 className={styles.pollutionChange}>
+          {/* <h3 className={styles.pollutionChange}>
             <img
               src={upArrow}
               alt="up arrow"
               style={{ width: "24px", height: "24px" }}
             />
             1.12% increase in pollution from yesterday.
-          </h3>
+          </h3> */}
 
           <div className={styles.recommendations}>
             <ul className={styles.recommendationList}>
+              Our Recommendations:
+              <br />
               <li className={styles.recommendationItem}>
                 <img
                   src={mask}

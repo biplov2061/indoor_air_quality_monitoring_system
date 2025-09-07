@@ -11,65 +11,42 @@ import {
 } from "recharts";
 
 export default function PollutionChart() {
-  const { IaqData } = useContext(IaqContext); // ✅ you’re using capital IaqData
+  const { IaqData } = useContext(IaqContext);
   const [chartData, setChartData] = useState([]);
-  const [hourlyData, setHourlyData] = useState({ hour: null, values: [] });
 
- useEffect(() => {
-  if (IaqData == null) return;
+  useEffect(() => {
+    if (IaqData == null) return;
 
-  const now = new Date();
-  const currentHour = now.getHours();
+    const now = new Date();
 
-  setHourlyData((prev) => {
-    // Same hour → keep adding new value
-    if (prev.hour === currentHour) {
-      const updatedValues = [...prev.values, IaqData];
-      const avgPPM =
-        updatedValues.reduce((sum, val) => sum + val, 0) /
-        updatedValues.length;
+    setChartData((prev) => {
+      // save full timestamp, not just formatted time
+      const newEntry = {
+        timestamp: now.getTime(), // 👈 real numeric timestamp
+        time: now.toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+        }),
+        ppm: IaqData,
+      };
 
-      const timeLabel = currentHour + ":00";
+      const updated = [...prev, newEntry];
 
-      setChartData((prevChart) => {
-        const last = prevChart[prevChart.length - 1];
-        if (last && last.time === timeLabel) {
-          return [
-            ...prevChart.slice(0, -1),
-            { time: timeLabel, ppm: avgPPM },
-          ];
-        } else {
-          return [...prevChart, { time: timeLabel, ppm: avgPPM }];
-        }
-      });
+      // keep last 24 hours
+      const cutoff = now.getTime() - 24 * 60 * 60 * 1000;
+      const filtered = updated.filter((d) => d.timestamp >= cutoff);
 
-      return { ...prev, values: updatedValues };
-    } else {
-      // Hour has changed → save previous hour average
-      if (prev.values.length > 0) {
-        const avgPPM =
-          prev.values.reduce((sum, val) => sum + val, 0) / prev.values.length;
-        const timeLabel = prev.hour + ":00";
-
-        setChartData((prevChart) => {
-          const updated = [...prevChart, { time: timeLabel, ppm: avgPPM }];
-          if (updated.length > 24) updated.shift(); // keep last 24 hours
-          return updated;
-        });
-      }
-
-      // Start new hour with current value
-      return { hour: currentHour, values: [IaqData] };
-    }
-  });
-}, [IaqData]);
+      return filtered;
+    });
+  }, [IaqData]);
 
   return (
     <div style={{ width: "100%", height: "400px", marginTop: "20px" }}>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={chartData}>
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="time" />
+          <XAxis dataKey="time" tick={{ fontSize: 10 }} />
           <YAxis label={{ value: "PPM", angle: -90, position: "insideLeft" }} />
           <Tooltip />
           <Line
@@ -78,6 +55,7 @@ export default function PollutionChart() {
             stroke="#007bff"
             strokeWidth={2}
             name="Air Quality (PPM)"
+            dot={false}
           />
         </LineChart>
       </ResponsiveContainer>

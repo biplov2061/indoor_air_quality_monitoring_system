@@ -280,19 +280,8 @@ h4 {
   margin-bottom: 30px;
 }
 
-@media (max-width: 600px) {
-  .about_container {
-    padding: 15px;
-  }
 
-  .about_heading {
-    font-size: 22px;
-  }
 
-  .about_text {
-    font-size: 14px;
-  }
-}
 
 /* Our Solution Section */
 
@@ -494,4 +483,36 @@ h4 {
 
 .footerLink:hover {
   color: blue;
+}
+
+
+@media (max-width: 600px) {
+
+  .container{
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+  }
+  .leftBox, .rightBox {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 35px;
+  }
+  .about_container {
+    padding: 15px;
+    width: auto;
+  }
+
+  .about_heading {
+    font-size: 40px;
+  }
+  
+  .solutions_heading{
+    font-size: 40px;
+  }
+
+  .about_text {
+    font-size: 14px;
+  }
 }

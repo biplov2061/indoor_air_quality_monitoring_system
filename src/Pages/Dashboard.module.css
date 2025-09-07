@@ -66,7 +66,7 @@ h3 {
 }
 
 .recommendations {
-  margin-top: 25px;
+  margin-top: 45px;
 }
 
 .recommendationList {
@@ -420,5 +420,16 @@ button {
 .inactive {
   background-color: #f44336;
   color: white;
+}
+
+@media (max-width: 600px){
+   .content{
+    flex-direction: column;
+    gap: 40px;
+   }
+
+   .leftSection{
+    width: 100%;
+   }
 }
 
